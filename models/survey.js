@@ -13,6 +13,6 @@ const surveySchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-const User = mongoose.model("Survey", surveySchema);
+const Survey = mongoose.model("Survey", surveySchema);
 
 module.exports = Survey;

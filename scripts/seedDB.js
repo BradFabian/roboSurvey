@@ -120,6 +120,7 @@ const surveySeed = [
 
 ];
 
+console.log('Inserting users...');
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
@@ -132,9 +133,10 @@ db.User
     process.exit(1);
   });
 
+  console.log('inserting surveys...')
 db.Survey  
     .remove({})
-    .then(() => db.User.collection.insertMany(surveySeed))
+    .then(() => db.Survey.collection.insertMany(surveySeed))
     .then(data => {
         console.log(data.result.n + " survey records inserted!");
         //process.exit(0);
@@ -144,4 +146,5 @@ db.Survey
         process.exit(1);
     });
 
+    console.log('Script end.');
     process.exit(0);
