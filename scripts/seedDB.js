@@ -8,6 +8,7 @@ mongoose.connect(
   "mongodb://localhost/roboSurvey"
 );
 
+//user collection seeds
 const userSeed = [
   {
     firstname: "Joed",
@@ -42,6 +43,81 @@ const userSeed = [
     role: "user"
   }
   
+];
+
+//survey collection seeds
+const surveySeed = [
+    {
+        name: "HTML",
+        survey: [
+            {
+                question: "What does HTML stand for?",
+                answers: ["Hyper Text Markup Language", 
+                          "Hyperlinks and Text Markup Language", 
+                          "Home Tool Markup Language"],
+                correctanswer: 0
+            },
+            {
+                question: "What is the correct sequence of HTML tags for starting a webpage?",
+                answers: ["Head, Title, HTML", 
+                          "Title, Head, HTML", 
+                          "HTML, Head, Title"],
+                correctanswer: 2
+            },
+            {
+                question: "Choose the correct HTML tag for the largest heading.",
+                answers: ["H1", "Heading", "Head", "H6"],
+                correctanswer: 0
+            }
+        ]
+    },
+    {
+        name: "CSS",
+        survey: [
+            {
+                question: "CSS stand for?",
+                answers: ["Case Sensitive Style", 
+                          "Computers Style Sheets", 
+                          "Cascade Style Sheets", 
+                          "Cascade Style Systems"],
+                correctanswer: 2
+            },
+            {
+                question: "A ___________   consist of a property and a value,",
+                answers: ["Tag", "Attribute", "Deceleration", "H1 {color: red;}"],
+                correctanswer: 1
+            },
+            {
+                question: "A declaration is terminated by a..",
+                answers: [". - period", "! - explanation point", "} - end curly bracket", "; - semicolon"],
+                correctanswer: 3
+            }
+        ]
+    },
+    {
+        name: "JS",
+        survey: [
+            {
+                question: "How can we starts Javascript ?",
+                answers: ["Script tag", 
+                          "Javascript tag", 
+                          "Language tag", 
+                          "None of above"],
+                correctanswer: 0
+            },
+            {
+                question: "Is javascript case sensitive ?",
+                answers: ["True", "False"],
+                correctanswer: 0
+            },
+            {
+                question: "How can we declare variable in javascript",
+                answers: ["Datatype", "Var", "Int", "Float"],
+                correctanswer: 1
+            }
+        ]
+    }
+
 ];
 
 db.User
