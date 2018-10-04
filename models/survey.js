@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
-const surveySchema = new Schema({
+var surveySchema = new Schema({
   name: { type: String, required: true },
   survey: [
       {
@@ -13,6 +13,6 @@ const surveySchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-const Survey = mongoose.model("Survey", surveySchema);
+var Survey = mongoose.model("Survey", surveySchema);
 
 module.exports = Survey;
