@@ -3,10 +3,13 @@ const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/roboSurvey"
-);
+/* mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://127.0.0.1/roboSurvey", function(error) {
+      console.log('Error connection to MongoDB \n' + error );
+  }
+); */
+
+
 
 //user collection seeds
 const userSeed = [
@@ -120,25 +123,13 @@ const surveySeed = [
 
 ];
 
-console.log('Inserting users...');
-db.User
-  .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " user records inserted!");
-    //process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
-
-  console.log('inserting surveys...')
-db.Survey  
-    .remove({})
-    .then(() => db.Survey.collection.insertMany(surveySeed))
-    .then(data => {
-        console.log(data.result.n + " survey records inserted!");
+function populateUser() {
+    console.log('Inserting users...');
+    db.User
+        .remove({})
+        .then(() => db.User.collection.insertMany(userSeed)) 
+        .then(data => {
+        console.log(data.result.n + " user records inserted!");
         //process.exit(0);
     })
     .catch(err => {
@@ -146,5 +137,34 @@ db.Survey
         process.exit(1);
     });
 
-    console.log('Script end.');
-    process.exit(0);
+}
+
+function populateSurvey() {
+    console.log('inserting surveys...')
+    db.Survey  
+        .remove({})
+        .then(() => db.Survey.collection.insertMany(surveySeed))
+        .then(data => {
+            console.log(data.result.n + " survey records inserted!");
+            //process.exit(0);
+        })
+        .catch(err => {
+            console.error(err);
+            process.exit(1);
+    });
+}
+
+
+    
+
+    mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey").then(
+        () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
+            populateUser();
+            populateSurvey();
+            console.log('Script end.');
+            process.exit(0);
+        },
+        err => { /** handle initial connection error */ 
+            console.log('Error connection to MongoDB \n' + error );
+        }
+      );
