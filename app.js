@@ -35,6 +35,15 @@ app.use(function(req, res, next) {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey", { useNewUrlParser: true } );
 
+// mongoose connection
+var mongooseConnection = mongoose.connection;
+// Get the default connection
+mongooseConnection.on('error', console.error.bind(console, 'connection error:'));
+
+mongooseConnection.once('open', function () {
+  console.log('Successfully Connected to MongoDB !');
+});
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
