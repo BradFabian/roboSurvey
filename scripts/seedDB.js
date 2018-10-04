@@ -146,7 +146,7 @@ function populateSurvey() {
         .then(() => db.Survey.collection.insertMany(surveySeed))
         .then(data => {
             console.log(data.result.n + " survey records inserted!");
-            //process.exit(0);
+            process.exit(0);
         })
         .catch(err => {
             console.error(err);
@@ -162,7 +162,6 @@ function populateSurvey() {
             populateUser();
             populateSurvey();
             console.log('Script end.');
-            process.exit(0);
         },
         err => { /** handle initial connection error */ 
             console.log('Error connection to MongoDB \n' + error );
