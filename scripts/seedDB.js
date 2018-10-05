@@ -123,6 +123,8 @@ const surveySeed = [
 
 ];
 
+
+
 function populateUser() {
     console.log('Inserting users...');
     db.User

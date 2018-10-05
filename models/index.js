@@ -1,5 +1,6 @@
 module.exports = {
     User: require("./user"),
-    Survey: require("./survey")
+    Survey: require("./survey"),
+    Evaluation: require("./evaluation")
   };
   
