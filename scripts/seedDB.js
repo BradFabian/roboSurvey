@@ -142,6 +142,12 @@ const evalSeed = [
         surveyName: "HTML",
         answers:[0, 2, 3],
         points: 66.66
+    },
+    {
+        userId: null,
+        surveyName: "HTML",
+        answers:[0, 2, 0],
+        points: 100
     }
 ];
 
@@ -186,6 +192,7 @@ function populateEvaluation() {
                 evalSeed[0].userId = doc[2]._id;
                 evalSeed[1].userId = doc[1]._id;
                 evalSeed[2].userId = doc[0]._id;
+                evalSeed[3].userId = doc[1]._id;
 
                 db.Evaluation.collection.insertMany(evalSeed)
                     .then( data => {

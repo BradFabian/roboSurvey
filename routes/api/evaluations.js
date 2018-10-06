@@ -14,4 +14,10 @@ router
   .put(evalController.update)
   .delete(evalController.remove);
 
+// Matches with "/api/evaluations/user/:userId"  
+
+router
+    .route("/user/:id")
+    .get(evalController.findByUser);
+
 module.exports = router;
