@@ -6,6 +6,6 @@ const evaluationRoutes = require("./evaluations");
 //api routes
 router.use("/users", userRoutes);               //using route /api/users
 router.use("/surveys", surveyRoutes);           //using route /api/surveys
-router.use("/evaluations", evaluationRoutes);   //using route /api/evaluations
+//router.use("/evaluations", evaluationRoutes);   //using route /api/evaluations
 
 module.exports = router;
