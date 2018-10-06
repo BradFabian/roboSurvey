@@ -1,9 +1,12 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
+var Oid = mongoose.Schema.Types.ObjectId;
 
 var evalSchema = new Schema({
-    userId: ObjectId,
-    surveys: [],
+    userId: Oid,
+    surveyName: String,
+    answers: [Number],
+    points: Number, 
     date: { type: Date, default: Date.now }
 });
 

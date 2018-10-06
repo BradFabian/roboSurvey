@@ -123,7 +123,27 @@ const surveySeed = [
 
 ];
 
-
+//Evaluation collection seeds
+const evalSeed = [
+    {
+        userId: null,
+        surveyName: "JS",
+        answers: [0, 0, 1],
+        points: 100
+    },
+    {
+        userId: null,
+        surveyName: "CSS",
+        answers: [2, 1, 3],
+        points: 100
+    },
+    {
+        userId: null,
+        surveyName: "HTML",
+        answers:[0, 2, 3],
+        points: 66.66
+    }
+];
 
 function populateUser() {
     console.log('Inserting users...');
@@ -132,7 +152,7 @@ function populateUser() {
         .then(() => db.User.collection.insertMany(userSeed)) 
         .then(data => {
         console.log(data.result.n + " user records inserted!");
-        //process.exit(0);
+        populateSurvey();
     })
     .catch(err => {
         console.error(err);
@@ -148,7 +168,7 @@ function populateSurvey() {
         .then(() => db.Survey.collection.insertMany(surveySeed))
         .then(data => {
             console.log(data.result.n + " survey records inserted!");
-            process.exit(0);
+            populateEvaluation();
         })
         .catch(err => {
             console.error(err);
@@ -156,16 +176,38 @@ function populateSurvey() {
     });
 }
 
+function populateEvaluation() {
+    console.log('inserting evaluations...');
+    db.Evaluation
+        .remove({})
+        //.then(() => db.Evaluation.collection.insertMany(evalSeed))
+        .then( () => {
+            db.User.find({}, function(err, doc) {
+                evalSeed[0].userId = doc[2]._id;
+                evalSeed[1].userId = doc[1]._id;
+                evalSeed[2].userId = doc[0]._id;
+
+                db.Evaluation.collection.insertMany(evalSeed)
+                    .then( data => {
+                        console.log(data.result.n + " evaluation records inserted!");
+                        process.exit(0);
+                    })
+            })
+        })
+        .catch(err => {
+            console.error(err);
+            process.exit(1);
+        });
+}
+
 
     
 
-    mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey").then(
-        () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
-            populateUser();
-            populateSurvey();
-            console.log('Script end.');
-        },
-        err => { /** handle initial connection error */ 
-            console.log('Error connection to MongoDB \n' + error );
-        }
-      );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey").then(
+    () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
+        populateUser();
+    },
+    err => { /** handle initial connection error */ 
+        console.log('Error connection to MongoDB \n' + error );
+    }
+);
