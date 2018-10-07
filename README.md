@@ -33,3 +33,33 @@
 | POST     | /api/evaluations       |       |
 | PUT     | /api/evaluations/:id       |       |
 | DELETE     | /api/evaluations/:id       |      
+***
+# JSON
+```json
+[
+  {
+    "answers": [
+      2,
+      1,
+      3
+    ]
+    "date": "2018-10-06T20:41:57.916Z",
+    "_id": "5bb82a36b1aaa66ec0016217",
+    "userId": "5bb82a361aaa66ec0016210",
+    "surveyName": "CSS",
+    "points": 100
+  },
+  {
+    "answers": [
+      0,
+      2,
+      0
+    ],
+ ```
+    "date": "2018-10-06T20:41:57.916Z",
+    "_id": "5bb91a79b6642a0b26c115ae",
+    "userId": "5bb82a361aaa66ec0016210",
+    "surveyName": "HTML",
+    "points": 100
+  }
+]
