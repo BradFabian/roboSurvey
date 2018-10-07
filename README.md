@@ -9,7 +9,7 @@
 
 ***
 API
-
+```
 GET     /api/users          (list all users)
 GET     /api/users/:id      (list one user)
 POST    /api/users          (creates a new user)
@@ -28,5 +28,5 @@ GET     /api/evaluations/user/:id   (list all evaluation of a given user id)
 POST    /api/evaluations
 PUT     /api/evaluations/:id
 DELETE  /api/evaluations/:id
-
+```
 
