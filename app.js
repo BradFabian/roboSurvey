@@ -37,6 +37,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey", { 
 
 // mongoose connection
 var mongooseConnection = mongoose.connection;
+
 // Get the default connection
 mongooseConnection.on('error', console.error.bind(console, 'connection error:'));
 
