@@ -9,7 +9,7 @@
 ***
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
 ***
-| API | Users |  |
+|:couple: API | Users |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/users     | (list all users)    |
 | GET     | /api/users/:id       | (list one user)      |
