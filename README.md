@@ -9,7 +9,6 @@
 ***
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
 ***
-```json
 | API | :couple: Users |  |
 | :---         |     :---:      |          ---: |
 | GET   |  /api/users    | (list all users)    |
@@ -34,4 +33,3 @@
 | POST     | /api/evaluations       |       |
 | PUT     | /api/evaluations/:id       |       |
 | DELETE     | /api/evaluations/:id       |      
-```
