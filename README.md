@@ -9,7 +9,7 @@
 ***
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
 ***
-|:couple: API | Users |  |
+| API | :couple: Users |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/users     | (list all users)    |
 | GET     | /api/users/:id       | (list one user)      |
@@ -17,7 +17,7 @@
 | PUT     | /api/users/:id       | (edit an existing user)      |
 | DELETE     | /api/users/:id       | (delete a user)      |
 ***
-| :clipboard: API | Surveys  |  |
+|  API | :clipboard: Surveys  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/surveys     | (list all users)    |
 | GET     | /api/surveys/:id       |       |
@@ -25,7 +25,7 @@
 | PUT     | /api/surveys/:id       |       |
 | DELETE     | /api/surveys/:id       |       |
 ***
-| :heavy_exclamation_mark: API | Evaluations  |  |
+|  API | :heavy_exclamation_mark: Evaluations  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/evaluations     |     |
 | GET     | /api/evaluations/:id       |       |
