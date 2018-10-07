@@ -10,7 +10,7 @@
 ***
 API
 ```
-GET     /api/users          (list all users)
+> GET     /api/users          (list all users)
 GET     /api/users/:id      (list one user)
 POST    /api/users          (creates a new user)
 PUT     /api/users/:id      (edit an existing user)
