@@ -9,9 +9,10 @@
 ***
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
 ***
+```json
 | API | :couple: Users |  |
 | :---         |     :---:      |          ---: |
-| GET   | ```json /api/users ```     | (list all users)    |
+| GET   |  /api/users    | (list all users)    |
 | GET     | /api/users/:id       | (list one user)      |
 | POST     | /api/users       | (creates a new user)      |
 | PUT     | /api/users/:id       | (edit an existing user)      |
@@ -33,3 +34,4 @@
 | POST     | /api/evaluations       |       |
 | PUT     | /api/evaluations/:id       |       |
 | DELETE     | /api/evaluations/:id       |      
+```
