@@ -8,24 +8,23 @@
 ![Alt Text](https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif)
 
 ***
-API
-```
-GET     /api/users          (list all users)
-GET     /api/users/:id      (list one user)
-POST    /api/users          (creates a new user)
-PUT     /api/users/:id      (edit an existing user)
-DELETE  /api/users/:id      (delete a user)
-
-GET     /api/surveys
-GET     /api/surveys/:id
-POST    /api/surveys
-PUT     /api/surveys/:id
-DELETE  /api/surveys/:id
-
-GET     /api/evaluations
-GET     /api/evaluations/:id
-GET     /api/evaluations/user/:id   (list all evaluation of a given user id)
-POST    /api/evaluations
-PUT     /api/evaluations/:id
-DELETE  /api/evaluations/:id
-```
+| API |  |  |
+| :---         |     :---:      |          ---: |
+| GET   | /api/users     | (list all users)    |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+***
+| GET   | /api/users     | (list all users)    |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+***
+| GET   | /api/users     | (list all users)    |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
+| GET     | /api/users/:id       | (list one user)      |
