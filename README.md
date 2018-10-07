@@ -1,4 +1,4 @@
-# 🤖 :bar_chart: roboSurvey
+# 🤖:bar_chart: roboSurvey
 ***
 [![Github commit merge status](https://img.shields.io/github/commit-status/badges/shields/master/5d4ab86b1b5ddfb3c4a70a70bd19932c52603b8c.svg)](https://github.com/ofuen/roboSurvey)
 [![GitHub contributors](https://img.shields.io/github/contributors/ofuen/roboSurvey.svg)](https://github.com/Dsalazar9/Project-2/)
