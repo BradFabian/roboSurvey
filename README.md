@@ -16,6 +16,7 @@
 | GET     | /api/users/:id       | (list one user)      |
 | GET     | /api/users/:id       | (list one user)      |
 ***
+| API |  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/users     | (list all users)    |
 | GET     | /api/users/:id       | (list one user)      |
@@ -23,6 +24,7 @@
 | GET     | /api/users/:id       | (list one user)      |
 | GET     | /api/users/:id       | (list one user)      |
 ***
+| API |  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/users     | (list all users)    |
 | GET     | /api/users/:id       | (list one user)      |
