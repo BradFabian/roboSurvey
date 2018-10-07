@@ -17,7 +17,7 @@
 | PUT     | /api/users/:id       | (edit an existing user)      |
 | DELETE     | /api/users/:id       | (delete a user)      |
 ***
-| API | Surveys  |  |
+| :clipboard: API | Surveys  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/surveys     | (list all users)    |
 | GET     | /api/surveys/:id       |       |
@@ -25,7 +25,7 @@
 | PUT     | /api/surveys/:id       |       |
 | DELETE     | /api/surveys/:id       |       |
 ***
-| API | Evaluations  |  |
+| :heavy_exclamation_mark: API | Evaluations  |  |
 | :---         |     :---:      |          ---: |
 | GET   | /api/evaluations     |     |
 | GET     | /api/evaluations/:id       |       |
