@@ -11,28 +11,28 @@
 ***
 | API | :couple: Users |  |
 | :---         |     :---:      |          ---: |
-| GET   |  /api/users    | (list all users)    |
-| GET     | /api/users/:id       | (list one user)      |
-| POST     | /api/users       | (creates a new user)      |
-| PUT     | /api/users/:id       | (edit an existing user)      |
-| DELETE     | /api/users/:id       | (delete a user)      |
+|  :black_circle:GET   |  /api/users    | (list all users)    |
+|  :black_circle:GET     | /api/users/:id       | (list one user)      |
+|  :white_circle:POST     | /api/users       | (creates a new user)      |
+|  :large_blue_circle:PUT     | /api/users/:id       | (edit an existing user)      |
+|  :red_circle:DELETE     | /api/users/:id       | (delete a user)      |
 ***
 |  API | :clipboard: Surveys  |  |
 | :---         |     :---:      |          ---: |
-| GET   | /api/surveys     | (list all users)    |
-| GET     | /api/surveys/:id       |       |
-| POST     | /api/surveys       |       |
-| PUT     | /api/surveys/:id       |       |
-| DELETE     | /api/surveys/:id       |       |
+|  :black_circle:GET   | /api/surveys     | (list all users)    |
+|  :black_circle:GET     | /api/surveys/:id       |       |
+|  :white_circle:POST     | /api/surveys       |       |
+|  :large_blue_circle:PUT     | /api/surveys/:id       |       |
+|  :red_circle:DELETE     | /api/surveys/:id       |       |
 ***
 |  API | :heavy_exclamation_mark: Evaluations  |  |
 | :---         |     :---:      |          ---: |
-| GET   | /api/evaluations     |     |
-| GET     | /api/evaluations/:id       |       |
-| GET     | /api/evaluations/user/:id       | (list all evaluation of a given user id)      |
-| POST     | /api/evaluations       |       |
-| PUT     | /api/evaluations/:id       |       |
-| DELETE     | /api/evaluations/:id       |      
+|  :black_circle:GET   | /api/evaluations     |     |
+|  :black_circle:GET     | /api/evaluations/:id       |       |
+|  :black_circle:GET     | /api/evaluations/user/:id       | (list all evaluation of a given user id)      |
+|  :white_circle:POST     | /api/evaluations       |       |
+|  :large_blue_circle:PUT     | /api/evaluations/:id       |       |
+|  :red_circle:DELETE     | /api/evaluations/:id       |      
 ***
 # JSON
 ```json
