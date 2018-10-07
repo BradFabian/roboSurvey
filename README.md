@@ -18,18 +18,17 @@
 ***
 | API | Surveys  |  |
 | :---         |     :---:      |          ---: |
-| GET   | /api/users     | (list all users)    |
-| GET     | /api/users/:id       | (list one user)      |
-| POST     | /api/users/:id       | (list one user)      |
-| PUT     | /api/users/:id       | (list one user)      |
-| DELETE     | /api/users/:id       | (list one user)      |
+| GET   | /api/surveys     | (list all users)    |
+| GET     | /api/surveys/:id       |       |
+| POST     | /api/surveys       |       |
+| PUT     | /api/surveys/:id       |       |
+| DELETE     | /api/surveys/:id       |       |
 ***
 | API | Evaluations  |  |
 | :---         |     :---:      |          ---: |
-| GET   | /api/users     | (list all users)    |
-| GET     | /api/users/:id       | (list one user)      |
-| GET     | /api/users/:id       | (list one user)      |
-| POST     | /api/users/:id       | (list one user)      |
-| PUT     | /api/users/:id       | (list one user)      |
-| DELETE     | /api/users/:id       | (list one user)      |
-
+| GET   | /api/evaluations     |     |
+| GET     | /api/evaluations/:id       |       |
+| GET     | /api/evaluations/user/:id       | (list all evaluation of a given user id)      |
+| POST     | /api/evaluations       |       |
+| PUT     | /api/evaluations/:id       |       |
+| DELETE     | /api/evaluations/:id       |      
