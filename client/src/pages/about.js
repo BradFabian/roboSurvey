@@ -34,8 +34,15 @@ const About = () => (
       </Row>
       <Row>
         <Col size="md-4" />
+        <Hero />
+        <p />
         <Col size="md-4" />
+        <Hero />
+        <p />
+
         <Col size="md-4" />
+        <Hero />
+        <p />
       </Row>
     </Container>
   </div>
