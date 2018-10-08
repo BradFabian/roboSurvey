@@ -19,7 +19,7 @@
 ***
 |  API | :clipboard: Surveys  |  |
 | :---         |     :---:      |          ---: |
-|  :black_circle:GET   | /api/surveys     | (list all users)    |
+|  :black_circle:GET   | /api/surveys     | (list all surveys)    |
 |  :black_circle:GET     | /api/surveys/:id       |       |
 |  :white_circle:POST     | /api/surveys       |       |
 |  :large_blue_circle:PUT     | /api/surveys/:id       |       |
