@@ -11,8 +11,8 @@
 
 <div align="center">
 <p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/react-padded-90.png" style="max-width:100%;"></a>
-<a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/raw/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
-<a href="http://redux.js.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/raw/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
+<a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
+<a href="http://redux.js.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
 <a href="https://github.com/ReactTraining/react-router"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/raw/master/internals/img/react-router-padded-90.png" style="max-width:100%;"></a>
 <a href="https://flowtype.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/raw/master/internals/img/flow-padded-90.png" style="max-width:100%;"></a>
 <a href="http://eslint.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/raw/master/internals/img/eslint-padded-90.png" style="max-width:100%;"></a>
