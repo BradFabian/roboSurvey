@@ -16,7 +16,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ofuen/roboSurvey.svg)](https://github.com/Dsalazar9/Project-2/)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
  </div>
-
+***
 ![Alt Text](https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif)
 ***
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
