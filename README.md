@@ -9,6 +9,17 @@
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667"><img src="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667" data-canonical-src="https://forthebadge.com/images/badges/for-you.svg" style="max-width:100%;"></a>
 </div>
 
+<div align="center">
+<p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/react-padded-90.png" style="max-width:100%;"></a>
+<a href="https://webpack.github.io/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
+<a href="http://redux.js.org/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
+<a href="https://github.com/ReactTraining/react-router"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/react-router-padded-90.png" style="max-width:100%;"></a>
+<a href="https://flowtype.org/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/flow-padded-90.png" style="max-width:100%;"></a>
+<a href="http://eslint.org/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/eslint-padded-90.png" style="max-width:100%;"></a>
+<a href="https://facebook.github.io/jest/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/jest-padded-90.png" style="max-width:100%;"></a>
+<a href="https://yarnpkg.com/" rel="nofollow"><img src="/chentsulin/electron-react-boilerplate/raw/master/internals/img/yarn-padded-90.png" style="max-width:100%;"></a></p>
+</div>
+
 
 
 [![Github commit merge status](https://img.shields.io/github/commit-status/badges/shields/master/5d4ab86b1b5ddfb3c4a70a70bd19932c52603b8c.svg)](https://github.com/ofuen/roboSurvey)
