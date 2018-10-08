@@ -8,7 +8,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667"><img src="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667" data-canonical-src="https://forthebadge.com/images/badges/made-with-javascript.svg" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667"><img src="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667" data-canonical-src="https://forthebadge.com/images/badges/for-you.svg" style="max-width:100%;"></a>
 </div>
-
+<br>
 <div align="center">
 <p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/react-padded-90.png" style="max-width:100%;"></a>
 <a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
