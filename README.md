@@ -1,4 +1,10 @@
 # 🤖:bar_chart: roboSurvey
+<div align="center">
+<br>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/d24f2f8414437a9491ea3145cafd373167315d50/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6275696c742d776974682d6c6f76652e737667"><img src="https://camo.githubusercontent.com/d24f2f8414437a9491ea3145cafd373167315d50/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6275696c742d776974682d6c6f76652e737667" data-canonical-src="https://forthebadge.com/images/badges/built-with-love.svg" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667"><img src="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667" data-canonical-src="https://forthebadge.com/images/badges/made-with-javascript.svg" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667"><img src="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667" data-canonical-src="https://forthebadge.com/images/badges/for-you.svg" style="max-width:100%;"></a>
+</div>
 ***
 [![Github commit merge status](https://img.shields.io/github/commit-status/badges/shields/master/5d4ab86b1b5ddfb3c4a70a70bd19932c52603b8c.svg)](https://github.com/ofuen/roboSurvey)
 [![GitHub contributors](https://img.shields.io/github/contributors/ofuen/roboSurvey.svg)](https://github.com/Dsalazar9/Project-2/)
@@ -7,12 +13,6 @@
 ***
 ![Alt Text](https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif)
 ***
-<div align="center">
-<br>
-<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/d24f2f8414437a9491ea3145cafd373167315d50/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6275696c742d776974682d6c6f76652e737667"><img src="https://camo.githubusercontent.com/d24f2f8414437a9491ea3145cafd373167315d50/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6275696c742d776974682d6c6f76652e737667" data-canonical-src="https://forthebadge.com/images/badges/built-with-love.svg" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667"><img src="https://camo.githubusercontent.com/fd5718136c433ef04e3b2e9f7a66ae27dc023191/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6d6164652d776974682d6a6176617363726970742e737667" data-canonical-src="https://forthebadge.com/images/badges/made-with-javascript.svg" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667"><img src="https://camo.githubusercontent.com/9de09295bb0ddc631e7180c44110bcbe31f7f179/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f666f722d796f752e737667" data-canonical-src="https://forthebadge.com/images/badges/for-you.svg" style="max-width:100%;"></a>
-</div>
 ![image](https://user-images.githubusercontent.com/19554935/46582075-9f41a600-ca0f-11e8-9fca-caa81f0d27de.png)
 ***
 | API | :couple: Users |  |
