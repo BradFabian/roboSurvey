@@ -11,7 +11,7 @@
 <br>
 
 <div align="center">
-<p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="https://dxj7eshgz03ln.cloudfront.net/production/link/image/147296/original_ratio_extra_large_5abba77a-f2c2-42e8-96ae-84dd7d589977.gif" height="80" style="max-width:100%;"></a>
+<p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="https://i2.wp.com/reactscript.com/wp-content/uploads/2016/06/React-Components-For-The-Web-Animations-API.gif" height="80" style="max-width:100%;"></a>
 <a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
 <a href="http://redux.js.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
 <a href="https://www.mongodb.com/"><img src="https://gcollazo.github.io/mongodbapp/assets/img/icon.png" height="80" style="max-width:100%;"></a>
