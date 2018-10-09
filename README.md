@@ -14,7 +14,7 @@
 <div align="center">
 <p><a href="https://facebook.github.io/react/" rel="nofollow"><img src="https://ubisafe.org/images/svg-logo-reactjs-4.png" height="80" style="max-width:100%;"></a>
 <a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
-<a href="http://redux.js.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
+<a href="https://git-scm.com/" rel="nofollow"><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height="80" style="max-width:100%;"></a>
 <a href="https://www.mongodb.com/"><img src="https://gcollazo.github.io/mongodbapp/assets/img/icon.png" height="80" style="max-width:100%;"></a>
 <a href="https://material-ui.com/" rel="nofollow"><img src="https://material-ui.com/static/images/material-ui-logo.svg" height="75" style="max-width:100%;"></a>
 <a href="http://eslint.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/eslint-padded-90.png" style="max-width:100%;"></a>
