@@ -30,7 +30,7 @@
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub followers](https://img.shields.io/github/followers/ofuen.svg?style=social&label=Follow)](https://github.com/ofuen/)
-![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 
 
 
