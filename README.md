@@ -31,6 +31,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub followers](https://img.shields.io/github/followers/ofuen.svg?style=social&label=Follow)](https://github.com/ofuen/)
 ![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/SubtitleEdit/October.svg)
 
 
 ![Alt Text](https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif)
