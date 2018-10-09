@@ -1,5 +1,5 @@
 <div align="center">
- <img src="![image](https://user-images.githubusercontent.com/19554935/46640477-3e62bc80-cb3a-11e8-8178-49a1b156715c.png)"></a> roboSurvey
+ ![image](https://user-images.githubusercontent.com/19554935/46640477-3e62bc80-cb3a-11e8-8178-49a1b156715c.png)roboSurvey
 </div>
 
 <div align="center">
