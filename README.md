@@ -29,7 +29,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ofuen/roboSurvey.svg)](https://github.com/Dsalazar9/Project-2/)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![GitHub followers](https://img.shields.io/github/followers/ofuen.svg?style=social&label=Follow)](https://github.com/ofuen/)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 
 
