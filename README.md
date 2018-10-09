@@ -20,7 +20,7 @@
 <a href="https://facebook.github.io/jest/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/jest-padded-90.png" style="max-width:100%;"></a>
 <a href="https://yarnpkg.com/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/yarn-padded-90.png" style="max-width:100%;"></a></p>
 </div>
-***
+<hr>
 
 
 [![Github commit merge status](https://img.shields.io/github/commit-status/badges/shields/master/5d4ab86b1b5ddfb3c4a70a70bd19932c52603b8c.svg)](https://github.com/ofuen/roboSurvey)
