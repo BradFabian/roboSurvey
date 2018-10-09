@@ -31,7 +31,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub followers](https://img.shields.io/github/followers/ofuen.svg?style=social&label=Follow)](https://github.com/ofuen/)
 ![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)
-[![Dependency Status][david_img]][david_site]
+
 
 
 
