@@ -15,7 +15,7 @@
 <a href="https://webpack.github.io/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/webpack-padded-90.png" style="max-width:100%;"></a>
 <a href="http://redux.js.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/redux-padded-90.png" style="max-width:100%;"></a>
 <a href="https://www.mongodb.com/"><img src="https://gcollazo.github.io/mongodbapp/assets/img/icon.png" height="80" style="max-width:100%;"></a>
-<a href="https://material-ui.com/" rel="nofollow"><img src="https://material-ui.com/static/images/material-ui-logo.svg" height="80" style="max-width:100%;"></a>
+<a href="https://material-ui.com/" rel="nofollow"><img src="https://material-ui.com/static/images/material-ui-logo.svg" height="75" style="max-width:100%;"></a>
 <a href="http://eslint.org/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/eslint-padded-90.png" style="max-width:100%;"></a>
 <a href="https://facebook.github.io/jest/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/jest-padded-90.png" style="max-width:100%;"></a>
 <a href="https://yarnpkg.com/" rel="nofollow"><img src="https://raw.githubusercontent.com/chentsulin/electron-react-boilerplate/master/internals/img/yarn-padded-90.png" style="max-width:100%;"></a></p>
