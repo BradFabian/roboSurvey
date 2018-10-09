@@ -1,5 +1,5 @@
 <div align="center">
- <img src="https://preview.ibb.co/hw41m9/Robot.png"></a> roboSurvey
+ <img src="https://preview.ibb.co/hw41m9/Robot.png" height="100"></a> roboSurvey
 </div>
 
 <div align="center">
