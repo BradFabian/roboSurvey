@@ -30,7 +30,7 @@
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub followers](https://img.shields.io/github/followers/ofuen.svg?style=social&label=Follow)](https://github.com/ofuen/)
-[![GitHub watchers](https://img.shields.io/github/watchers/badges/roboSurvey.svg?style=social&label=Watch)](https://github.com/ofuen/roboSurvey/watchers)
+[![GitHub watchers](https://img.shields.io/github/watchers/badges/roboSurvey.svg?style=social&label=Watch)](https://github.com/ofuen/roboSurvey/)
 
 
 ![Alt Text](https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif)
