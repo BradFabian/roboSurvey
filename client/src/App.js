@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import About from "./pages/About";
+import About from "./pages/about";
 import FAQ from "./pages/faq";
 import Login from "./pages/login.js";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 
 import Wrapper from "./components/Wrapper";
 import "./App.css";
@@ -13,10 +13,10 @@ const App = () => (
     <div>
       <Navbar />
       <Wrapper>
-        <Route exact path="/" componnent={About} />
-        <Route exact path="/about" componnent={About} />
-        <Route exact path="/faq" componnent={FAQ} />
-        <Route exact path="/login" componnent={Login} />
+        <Route exact path="/" Component={About} />
+        <Route exact path="/about" Component={About} />
+        <Route exact path="/faq" Component={FAQ} />
+        <Route exact path="/login" Component={Login} />
       </Wrapper>
     </div>
   </Router>
