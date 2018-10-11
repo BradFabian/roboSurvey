@@ -27,19 +27,23 @@ const About = () => (
           </h3>
         </Col>
       </Row>
+
       <Row>
         <Col size="md-12" />
+        <div className="card mb-4">
+          <div className="card-body" />
+        </div>
       </Row>
       <Row>
         <Col size="md-4" />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
+        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
         <p />
         <Col size="md-4" />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
+        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
         <p />
 
         <Col size="md-4" />
-        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
+        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
         <p />
       </Row>
     </Container>
