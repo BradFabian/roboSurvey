@@ -16,14 +16,12 @@ const About = () => (
         </Col>
         <Col size="md-12">
           <h3>
-            {" "}
             Identify your employees potentials , quintify a great team
             enviroment and
           </h3>
         </Col>
         <Col size="md-12">
           <h3>
-            {" "}
             Reccomend training for any discovered inadequacies within an
             employees skills assesement.
           </h3>
@@ -34,14 +32,14 @@ const About = () => (
       </Row>
       <Row>
         <Col size="md-4" />
-        <Hero />
+        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
         <p />
         <Col size="md-4" />
-        <Hero />
+        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
         <p />
 
         <Col size="md-4" />
-        <Hero />
+        <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg" />
         <p />
       </Row>
     </Container>
