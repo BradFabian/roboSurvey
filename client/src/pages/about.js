@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
@@ -29,22 +28,49 @@ const About = () => (
       </Row>
 
       <Row>
-        <Col size="md-12" />
+        <Col size="md-4" />
         <div className="card mb-4">
-          <div className="card-body" />
+          <img
+            className="card-img-top"
+            src="https://picsum.photos/200/300/?random"
+            alt="Happy Customer"
+          />
+          <div className="card-body">
+            <p className="card-text">
+              Robo Survey has helped our company target weaker employees and
+              train them to be more productive! Our bottom line has doubled!
+            </p>
+          </div>
         </div>
-      </Row>
-      <Row>
         <Col size="md-4" />
-        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
-        <p />
-        <Col size="md-4" />
-        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
-        <p />
+        <div className="card mb-4">
+          <img
+            className="card-img-top"
+            src="https://picsum.photos/200/300/?random"
+            alt="Happy Customer"
+          />
+          <div className="card-body">
+            <p className="card-text">
+              My managers now have the tools to make their teams way more
+              effecient and productive! Thank You!
+            </p>
+          </div>
+        </div>
 
         <Col size="md-4" />
-        <Hero backgroundImage="https://picsum.photos/200/300/?random" />
-        <p />
+        <div className="card mb-4">
+          <img
+            className="card-img-top"
+            src="https://picsum.photos/200/300/?random"
+            alt="Happy Customer"
+          />
+          <div className="card-body">
+            <p className="card-text">
+              I did not like giving annual reviews but now I am armed with
+              methods on how to better train my staff.
+            </p>
+          </div>
+        </div>
       </Row>
     </Container>
   </div>
