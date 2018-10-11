@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sandra",
+    "image": "https://www.pape-sheldon.com/business-photography/headshots-styles/corporate-gallery/files/professional-corporate-business-headshot-woman-18.jpg",
+    "occupation": "HR DIRECTOR",
+    "review": "I did not like giving annual reviews but now I am armed with methods on how to better train my staff."
+  },
+  {
+    "id": 2,
+    "name": "George",
+    "image": "https://www.pape-sheldon.com/business-photography/headshots-styles/corporate-gallery/files/professional-corporate-business-headshot-man-02.jpg",
+    "occupation": "CTO",
+    "review": "My managers now have the tools to make their teams way more effecient and productive! Thank You!"
+  },
+  {
+    "id": 3,
+    "name": "Frank",
+    "image": "https://www.pape-sheldon.com/business-photography/headshots-styles/corporate-gallery/files/professional-corporate-business-headshot-man-15.jpg",
+    "occupation": "CEO",
+    "review": "Robo Survey has helped our company target weaker employees and train them to be more productive! Our bottom line has doubled!"
+  }
+]
