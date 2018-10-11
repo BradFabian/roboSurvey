@@ -4,7 +4,7 @@ import About from "./pages/about";
 import FAQ from "./pages/faq";
 import Login from "./pages/login.js";
 import Navbar from "./components/NavBar";
-
+import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import "./App.css";
 
@@ -18,6 +18,7 @@ const App = () => (
         <Route exact path="/faq" Component={FAQ} />
         <Route exact path="/login" Component={Login} />
       </Wrapper>
+      <Footer />
     </div>
   </Router>
 );
