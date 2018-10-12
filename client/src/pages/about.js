@@ -41,6 +41,7 @@ class About extends Component {
               key={review.id}
               name={review.name}
               image={review.image}
+              style={{ float: "left" }}
               occupation={review.occupation}
               review={review.review}
             />

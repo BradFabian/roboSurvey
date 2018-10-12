@@ -2,7 +2,7 @@ import React from "react";
 import "./ReviewCard.css";
 
 const ReviewCard = props => (
-  <div className="card">
+  <div className="card" style={props.style}>
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
