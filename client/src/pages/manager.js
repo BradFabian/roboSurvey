@@ -10,11 +10,10 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import SimpleTable from '../components/SimpleTable';
-import { mainListItems, secondaryListItems } from './listItems';
+import SimpleTable from '../components/SimpleTable/SimpleTable';
+import { mainListItems, secondaryListItems } from '../components/ListItems';
 
 const drawerWidth = 240;
 
@@ -23,7 +22,7 @@ const styles = theme => ({
     display: 'flex',
   },
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed
+    paddingRight: 0, // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: 'flex',
@@ -95,7 +94,7 @@ const styles = theme => ({
   },
 });
 
-class Dashboard extends React.Component {
+class Manager extends React.Component {
   state = {
     open: true,
   };
@@ -140,10 +139,6 @@ class Dashboard extends React.Component {
               >
                 Manager Dashboard
               </Typography>
-              <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                </Badge>
-              </IconButton>
             </Toolbar>
           </AppBar>
           <Drawer
@@ -178,8 +173,8 @@ class Dashboard extends React.Component {
   }
 }
 
-Dashboard.propTypes = {
+Manager.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Dashboard);
+export default withStyles(styles)(Manager);
