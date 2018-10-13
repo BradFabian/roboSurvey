@@ -8,18 +8,18 @@ import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 // core components
 
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardFooter from "components/Card/CardFooter.js";
+import GridContainer from "../components/GridContainer/GridContainer";
+import GridItem from "../components/GridItem/GridItem";
+import Button from "../components/Button/Button";
+import Card from "../components/Card/Card";
+import CardBody from "../components/CardBody/cardBody";
+import CardHeader from "../components/CardHeader/CradHeader";
+import CardFooter from "components/Card/";
 import CustomInput from "components/CustomInput/CustomInput.js";
 
 import Loginstyle from "../components/Login";
 
-import image from "assets/img/bg7.jpg";
+import image from "../assets/img";
 
 class LoginPage extends React.Component {
   constructor(props) {
