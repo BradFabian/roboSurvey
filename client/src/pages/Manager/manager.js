@@ -13,9 +13,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import SimpleTable from '../components/SimpleTable';
 import { mainListItems, secondaryListItems } from './listItems';
-import SimpleLineChart from './SimpleLineChart';
-import SimpleTable from './SimpleTable';
 
 const drawerWidth = 240;
 
@@ -139,7 +138,7 @@ class Dashboard extends React.Component {
                 noWrap
                 className={classes.title}
               >
-                Dashboard
+                Manager Dashboard
               </Typography>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
@@ -167,13 +166,7 @@ class Dashboard extends React.Component {
           <main className={classes.content}>
             <div className={classes.appBarSpacer} />
             <Typography variant="h4" gutterBottom component="h2">
-              Orders
-            </Typography>
-            <Typography component="div" className={classes.chartContainer}>
-              <SimpleLineChart />
-            </Typography>
-            <Typography variant="h4" gutterBottom component="h2">
-              Products
+              Employee List
             </Typography>
             <div className={classes.tableContainer}>
               <SimpleTable />
