@@ -14,8 +14,8 @@ import Button from "../components/Button/Button";
 import Card from "../components/Card/Card";
 import CardBody from "../components/CardBody/cardBody";
 import CardHeader from "../components/CardHeader/CradHeader";
-import CardFooter from "components/Card/";
-import CustomInput from "components/CustomInput/CustomInput.js";
+import CardFooter from "../components/CardFooter/cardFooter";
+import CustomInput from "../components/CustomInput/CustomInput";
 
 import Loginstyle from "../components/Login";
 
