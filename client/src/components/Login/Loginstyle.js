@@ -1,8 +1,8 @@
-import { container } from "assets/jss/material-kit-react.jsx";
+import { conatinerFluid } from "../Material-react-API/Materia-react";
 
-const signupPageStyle = {
+const loginStyle = {
   container: {
-    ...container,
+    ...conatinerFluid,
     zIndex: "2",
     position: "relative",
     paddingTop: "20vh",
@@ -86,3 +86,4 @@ const signupPageStyle = {
     color: "#495057"
   }
 };
+export default loginStyle;
