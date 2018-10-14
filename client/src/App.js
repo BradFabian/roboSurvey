@@ -4,7 +4,7 @@ import About from "./pages/about";
 import FAQ from "./pages/faq";
 import Login from "./pages/login";
 import Manager from "./pages/manager"
-//import Navbar from "./components/NavBar";
+import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import "./App.css";
@@ -12,6 +12,7 @@ import "./App.css";
 const App = () => (
   <Router>
     <div>
+    <Navbar/>
       <Wrapper>
         <Route exact path="/" component={About} />
         <Route exact path="/about" component={About} />
@@ -19,7 +20,7 @@ const App = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/manager" component={Manager}/>
       </Wrapper>
-      <Footer />
+      <Footer/>
     </div>
   </Router>
 );
