@@ -1,3 +1,4 @@
+import React from "react";
 import Login from "../components/Login";
 import image from "../assets/img/bg7.jpg";
 

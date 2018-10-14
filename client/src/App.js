@@ -12,12 +12,12 @@ const App = () => (
   <Router>
     <div>
       <Navbar />
-      <Wrapper>
-        <Route exact path="/" component={About} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/faq" component={FAQ} />
-        <Route exact path="/login" component={Login} />
-      </Wrapper>
+
+      <Route exact path="/" component={About} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/faq" component={FAQ} />
+      <Route exact path="/login" component={Login} />
+
       <Footer />
     </div>
   </Router>
