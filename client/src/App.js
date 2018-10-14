@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./pages/about";
 import FAQ from "./pages/faq";
 import Login from "./pages/login";
+import Manager from "./pages/manager"
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
@@ -11,6 +12,7 @@ import "./App.css";
 const App = () => (
   <Router>
     <div>
+
       <Navbar />
 
       <Route exact path="/" component={About} />
@@ -19,6 +21,7 @@ const App = () => (
       <Route exact path="/login" component={Login} />
 
       <Footer />
+
     </div>
   </Router>
 );
