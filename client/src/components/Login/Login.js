@@ -6,7 +6,7 @@ class Login extends React.Component {
     return (
       <Container>
         <Row>
-          <Col md="6">
+          <Col md="4" style={{ margin: "auto" }}>
             <Card>
               <CardBody>
                 <form>
