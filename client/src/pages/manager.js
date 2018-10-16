@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import DropDown from '../components/DropDown/DropDown';
 import BarChart from '../components/BarChart/BarChart';
 import SimpleTable from '../components/SimpleTable/SimpleTable';
 
@@ -41,9 +42,13 @@ class Manager extends React.Component {
       <React.Fragment>
         <CssBaseline />
         <div className={classes.root}>
+        <DropDown />
           <main className={classes.content}>
+          <br></br>
             <div className={classes.chartContainer}>
             <BarChart />
+            <br></br>
+            <br></br>
             </div>
             <div className={classes.appBarSpacer} />
             <Typography variant="h4" gutterBottom component="h2">
