@@ -4,6 +4,6 @@ const queryScores = "";
 export default {
   //Gets all scores
   getScores: function() {
-    return axios.get(APIURL + Scores);
+    return axios.get(APIURL + queryScores);
   }
 };
