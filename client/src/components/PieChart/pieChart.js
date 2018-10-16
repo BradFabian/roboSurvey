@@ -5,17 +5,12 @@ import API from "../utils/API";
 
 class ChartsPage extends React.Component {
   state = {
-    labels: [],
-    data: []
-  };
-
-  loadScores = scores => {
-    API.data(scores)
-      .then(res => this.setState({ labels: res.data, points: res.data }))
-      .catch(err => console.log(err));
+    result: {},
+    search: ""
   };
 
   componentDidMount() {
+    this.loadScores("jose");
     //doughnut
     var ctxD = document.getElementById("doughnutChart").getContext("2d");
     new Chart(ctxD, {
@@ -47,6 +42,12 @@ class ChartsPage extends React.Component {
       }
     });
   }
+
+  loadScores = query => {
+    API.search(query)
+      .then(res => this.setState({ result: res.data }))
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <Container>

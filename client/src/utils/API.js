@@ -1,6 +1,6 @@
 import axios from "axios";
 const APIURL = "/api/evaluations";
-const queryScores = "";
+const queryScores = "/";
 export default {
   //Gets all scores
   getScores: function() {
