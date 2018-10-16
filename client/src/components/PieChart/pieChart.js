@@ -1,20 +1,8 @@
 import React from "react";
 import { Chart } from "react-chartjs-2";
 import { Container } from "mdbreact";
-import API from "../utils/API";
 
 class ChartsPage extends React.Component {
-  state = {
-    labels: [],
-    data: []
-  };
-
-  loadScores = scores => {
-    API.data(scores)
-      .then(res => this.setState({ labels: res.data, points: res.data }))
-      .catch(err => console.log(err));
-  };
-
   componentDidMount() {
     //doughnut
     var ctxD = document.getElementById("doughnutChart").getContext("2d");
@@ -24,7 +12,7 @@ class ChartsPage extends React.Component {
         labels: ["HTML", "React", "Jquery", "Javascript", "MongoDB"],
         datasets: [
           {
-            points: [res.data, res.data, res.data, res.data, 120],
+            points: [10, 30, 60, 100, 120],
             backgroundColor: [
               "#F7464A",
               "#46BFBD",
@@ -47,6 +35,7 @@ class ChartsPage extends React.Component {
       }
     });
   }
+
   render() {
     return (
       <Container>
