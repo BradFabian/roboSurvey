@@ -13,8 +13,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import SimpleTable from '../components/SimpleTable';
-import { mainListItems, secondaryListItems } from './listItems';
+import SimpleTable from '../../components/SimpleTable';
+import { mainListItems, secondaryListItems } from '../../components/ListItems';
 
 const drawerWidth = 240;
 
