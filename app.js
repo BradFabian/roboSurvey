@@ -5,8 +5,6 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-
-
 const routes = require("./routes");
 
 const PORT = process.env.PORT || 3001;
@@ -14,12 +12,12 @@ const PORT = process.env.PORT || 3001;
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 
-
 var app = express();
 
-
-var server = app.listen(PORT, function () {
-  console.log(new Date().toISOString() + ": API Server listening on port " + PORT);
+var server = app.listen(PORT, function() {
+  console.log(
+    new Date().toISOString() + ": API Server listening on port " + PORT
+  );
 });
 
 // view engine setup
@@ -32,16 +30,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
 // Add routes, both API and view
 app.use(routes);
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 
-
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   next(createError(404));
 });
 
@@ -60,12 +55,12 @@ mongooseConnection.on(
   console.error.bind(console, "connection error:")
 );
 
-mongooseConnection.once("open", function () {
+mongooseConnection.once("open", function() {
   console.log("Successfully Connected to MongoDB !");
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
