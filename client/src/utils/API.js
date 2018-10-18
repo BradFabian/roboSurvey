@@ -51,11 +51,11 @@ export default {
   /********* E V A L U A T I O N S **********/
   
   // List all evaluations
-  getAllSurveys: function() {
+  getAllEvals: function() {
     return axios.get("/api/evaluations");
   },
   // List one evaluation with the given id
-  getSurvey: function(id) {
+  getEval: function(id) {
     return axios.get("/api/evaluations/" + id);
   },
   //List all evaluations of a given user id
@@ -63,15 +63,15 @@ export default {
     return axios.get("/api/evaluations/user/" + userId);
   },
   //Creates one evaluation
-  addSurvey: function(survey) {
+  addEval: function(survey) {
     return axios.post("/api/evaluations", survey);
   },
   //Updates the evaluation with the given id
-  updateSurvey: function(id, survey) {
+  updateEval: function(id, survey) {
     return axios.put("/api/evaluations/" + id, survey);
   },
   // Deletes the evaluation with the given id
-  deleteUser: function(id) {
+  deleteEval: function(id) {
     return axios.delete("/api/evaluations/" + id);
   }
 
