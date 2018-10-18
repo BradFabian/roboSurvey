@@ -9,10 +9,10 @@ class ChartsPage extends React.Component {
     new Chart(ctxD, {
       type: "doughnut",
       data: {
-        labels: ["HTML", "React", "Jquery", "Javascript", "MongoDB"],
+        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
         datasets: [
           {
-            points: [10, 30, 60, 100, 120],
+            data: [300, 50, 100, 40, 120],
             backgroundColor: [
               "#F7464A",
               "#46BFBD",
@@ -35,7 +35,6 @@ class ChartsPage extends React.Component {
       }
     });
   }
-
   render() {
     return (
       <Container>
