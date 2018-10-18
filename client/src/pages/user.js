@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import ChartsPage from "../components/PieChart/pieChart";
+import Welcome from "../components/Welcome/Welcome";
+import SurveyList from "../components/SurveyList/SurveyList";
 import ResultList from "../components/ResultList/ResultList";
-import { Container, Row, Col } from "mdbreact";
 import API from "../utils/API";
 
 class User extends Component {
   state = {
-    result: []
+    result: [],
+    name: [],
+    survey: []
   };
   loadScores = query => {
     API.getAllEvals()
@@ -14,20 +17,43 @@ class User extends Component {
       .catch(err => console.log(err));
   };
 
+  loadUser = query => {
+    API.getUser("5bc3d3fde1103d205cf1fad9")
+      .then(res => this.setState({ name: res.data }))
+      .catch(err => console.log(err));
+  };
+
+  loadSurvey = query => {
+    API.getAllSurveys()
+      .then(res => this.setState({ survey: res.data }))
+      .catch(err => console.log(err));
+  };
+
   componentDidMount() {
     this.loadScores();
+    this.loadUser();
+    this.loadSurvey();
   }
 
   render() {
     return (
-      <Container>
-        <ChartsPage result={this.state.result} />
-        <Row>
-          <Col>
-            <ResultList result={this.state.result} />
-          </Col>
-        </Row>
-      </Container>
+      <div className="row">
+        <div className="col-md-8">
+          <Welcome className="welcome_user" name={this.state.name} />
+
+          <div className="row">
+            <div className="col-md-6">
+              <ResultList result={this.state.result} />
+            </div>
+            <div className="col-md-6">
+              <SurveyList survey={this.state.survey} />
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <ChartsPage />
+        </div>
+      </div>
     );
   }
 }

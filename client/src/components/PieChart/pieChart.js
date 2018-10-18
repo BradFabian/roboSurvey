@@ -9,10 +9,10 @@ class ChartsPage extends React.Component {
     new Chart(ctxD, {
       type: "doughnut",
       data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        labels: ["HTML", "CSS", "Javascript", "Node", "React"],
         datasets: [
           {
-            data: [],
+            data: [300, 50, 100, 40, 120],
             backgroundColor: [
               "#F7464A",
               "#46BFBD",
