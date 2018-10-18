@@ -44,7 +44,7 @@ export default {
     return axios.put("/api/surveys/" + id, survey);
   },
   // Deletes the survey with the given id
-  deleteUser: function(id) {
+  deleteSurvey: function(id) {
     return axios.delete("/api/surveys/" + id);
   },
 
