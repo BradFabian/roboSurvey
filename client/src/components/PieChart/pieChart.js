@@ -12,7 +12,7 @@ class ChartsPage extends React.Component {
         labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
         datasets: [
           {
-            data: [300, 50, 100, 40, 120],
+            data: [],
             backgroundColor: [
               "#F7464A",
               "#46BFBD",
