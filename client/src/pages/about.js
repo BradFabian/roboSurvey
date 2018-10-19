@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReviewCard from "../components/ReviewCard";
-
+import image from "../assets/img/";
 import reviews from "../reviews.json";
 import { Container, Row, Col } from "mdbreact";
 class About extends Component {
