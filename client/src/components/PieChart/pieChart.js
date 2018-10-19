@@ -1,44 +1,58 @@
 import React from "react";
-import { Chart } from "react-chartjs-2";
+import { Chart, Doughnut } from "react-chartjs-2";
 import { Container } from "mdbreact";
+import API from "../../utils/API";
 
 class ChartsPage extends React.Component {
+  state = {
+    data: [],
+    labels: []
+  };
+
+  loadEval = () => {
+    API.getUserEval(this.props.userId)
+      .then(res => {
+        this.setState(
+          { data: res.data[0].points, labels: res.data[0].surveyName },
+          () => {
+            console.log(this.state);
+          }
+        );
+      })
+      .catch(err => console.log(err));
+  };
   componentDidMount() {
     //doughnut
-    var ctxD = document.getElementById("doughnutChart").getContext("2d");
-    new Chart(ctxD, {
-      type: "doughnut",
-      data: {
-        labels: ["HTML", "CSS", "Javascript", "Node", "React"],
-        datasets: [
-          {
-            data: [300, 50, 100, 40, 120],
-            backgroundColor: [
-              "#F7464A",
-              "#46BFBD",
-              "#FDB45C",
-              "#949FB1",
-              "#4D5360"
-            ],
-            hoverBackgroundColor: [
-              "#FF5A5E",
-              "#5AD3D1",
-              "#FFC870",
-              "#A8B3C5",
-              "#616774"
-            ]
-          }
-        ]
-      },
-      options: {
-        responsive: true
-      }
-    });
+    this.loadEval();
   }
   render() {
     return (
       <Container>
-        <canvas id="doughnutChart" />
+        <Doughnut
+          options={{ responsive: true }}
+          data={{
+            labels: [this.state.labels, "Jss", "css"],
+            datasets: [
+              {
+                data: [this.state.data, 100, 200],
+                backgroundColor: [
+                  "#F7464A",
+                  "#46BFBD",
+                  "#FDB45C",
+                  "#949FB1",
+                  "#4D5360"
+                ],
+                hoverBackgroundColor: [
+                  "#FF5A5E",
+                  "#5AD3D1",
+                  "#FFC870",
+                  "#A8B3C5",
+                  "#616774"
+                ]
+              }
+            ]
+          }}
+        />
       </Container>
     );
   }
