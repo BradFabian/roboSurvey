@@ -18,13 +18,17 @@ class User extends Component {
   };
 
   loadUser = query => {
+<<<<<<< HEAD
     API.getUser("5bba189117f469381400f17f")
+=======
+    API.getUser(this.props.match.params.id)
+>>>>>>> 631ed69258acf90b46c5b96f26e70ed08240a7f5
       .then(res => this.setState({ name: res.data }))
       .catch(err => console.log(err));
   };
 
-  loadSurvey = query => {
-    API.getAllSurveys()
+  loadEval = query => {
+    API.getUserEval(this.props.match.params.id)
       .then(res => this.setState({ survey: res.data }))
       .catch(err => console.log(err));
   };
@@ -32,7 +36,7 @@ class User extends Component {
   componentDidMount() {
     this.loadScores();
     this.loadUser();
-    this.loadSurvey();
+    this.loadEval();
   }
 
   render() {
@@ -51,7 +55,7 @@ class User extends Component {
           </div>
         </div>
         <div className="col-md-4">
-          <ChartsPage />
+          <ChartsPage userId={this.props.match.params.id} />
         </div>
       </div>
     );

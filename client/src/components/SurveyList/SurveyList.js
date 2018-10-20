@@ -6,10 +6,8 @@ const SurveyList = props => (
       <li className="list-group-item" key={result._id}>
         <h2>
           Test:
-          {result.name} Survey:
-          {result.survey.question}
-          {result.survey.answers}
-          {result.survey.correctanswer}
+          {result.surveyName} Survey:
+          {result.points}
         </h2>
       </li>
     ))}

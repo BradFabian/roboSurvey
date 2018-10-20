@@ -62,7 +62,12 @@
 |  :black_circle:GET     | /api/evaluations/user/:id       | (list all evaluation of a given user id)      |
 |  :white_circle:POST     | /api/evaluations       |       |
 |  :large_blue_circle:PUT     | /api/evaluations/:id       |       |
-|  :red_circle:DELETE     | /api/evaluations/:id       |      
+|  :red_circle:DELETE     | /api/evaluations/:id       |   
+***
+| API | Login | |
+| :---         |     :---:      |          ---: |
+|  :white_circle:POST     | /api/login       | (ask for a user id with given email an password )       |
+
 ***
 # JSON
 ```json
