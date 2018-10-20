@@ -18,7 +18,7 @@ class User extends Component {
   };
 
   loadUser = query => {
-    API.getUser("5bc3d3fde1103d205cf1fad9")
+    API.getUser("5bba189117f469381400f17f")
       .then(res => this.setState({ name: res.data }))
       .catch(err => console.log(err));
   };
