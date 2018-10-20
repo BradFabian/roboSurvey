@@ -1,5 +1,7 @@
 import React from 'react';
 import API from '../../utils/API';
+import Question from './Question';
+import MultiChoiseAnswer from './MultiChoiseAnswer'
 
 class DisplaySurvey extends React.Component {
 
@@ -35,8 +37,14 @@ class DisplaySurvey extends React.Component {
 
         return (
             <div>
-                Here goes the survey rendered
-                <p>{this.state.survey.name}</p>
+                <div>
+                    <h2>{this.state.survey.name}</h2>
+                    <form>
+                        <Question question="My first question"/>
+                        <MultiChoiseAnswer />
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
             </div>
         )
 

@@ -1,32 +1,22 @@
 import React from 'react';
+import {RadioGroup} from 'react';
+import {RadioOption} from 'react';
 
 class MultiChoiseAnswer extends React.Component {
 
     render() {
 
         return(
-
             <div>
-                <RadioGroup>
-                    
-                    <RadioOption>
-                        name="answer1",
-                        value=0
-                    >
-                        Possible answer 1
-                    </RadioOption>
+                Answer 1
+                <input type="radio" name="answer1" value="0"/> 
 
-                    <RadioOption>
-                        name="answer1",
-                        value=1
-                    >
-                        Possible answer 2
-                    </RadioOption>
-
-                </RadioGroup>
+                Answer 2
+                <input type="radio" name="answer1" value="1"/> 
             </div>
-
         )
     }
     
 }
+
+export default MultiChoiseAnswer;
