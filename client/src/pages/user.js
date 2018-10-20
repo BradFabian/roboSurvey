@@ -3,7 +3,7 @@ import ChartsPage from "../components/PieChart/pieChart";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
 import SurveyList from "../components/SurveyList/SurveyList";
-
+import ResultList from "../components/ResultList/ResultList";
 import API from "../utils/API";
 
 class User extends Component {
@@ -19,7 +19,6 @@ class User extends Component {
   };
 
   loadUser = query => {
-    API.getUser("5bba189117f469381400f17f")
     API.getUser(this.props.match.params.id)
       .then(res => this.setState({ name: res.data }))
       .catch(err => console.log(err));
