@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ChartsPage from "../components/PieChart/pieChart";
+import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
 import SurveyList from "../components/SurveyList/SurveyList";
 import ResultList from "../components/ResultList/ResultList";
@@ -37,22 +38,37 @@ class User extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-8">
-          <Welcome className="welcome_user" name={this.state.name} />
-
-          <div className="row">
-            <div className="col-md-6">
-              <ResultList result={this.state.result} />
-            </div>
-            <div className="col-md-6">
-              <SurveyList survey={this.state.survey} />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <ChartsPage userId={this.props.match.params.id} />
-        </div>
+      <div
+        className="BG"
+        style={{
+          backgroundImage: "linear-gradient(90deg, navy, aqua)",
+          paddingBottom: "30%"
+        }}
+      >
+        <Container style={{ margin: "auto" }}>
+          <Row>
+            <Col size="md-12">
+              <Welcome className="welcome_user" name={this.state.name} />
+            </Col>
+            <Row>
+              <Col>
+                <SurveyList survey={this.state.survey} />
+              </Col>
+              <Col>
+                <Card>
+                  <CardBody style={{ textAlign: "center" }}>
+                    <CardTitle tag="h5">Skills Results Graph</CardTitle>
+                    <ChartsPage userId={this.props.match.params.id} />
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col>
+                {" "}
+                <SurveyList survey={this.state.survey} />{" "}
+              </Col>
+            </Row>
+          </Row>
+        </Container>
       </div>
     );
   }
