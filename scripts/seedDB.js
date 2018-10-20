@@ -187,15 +187,16 @@ function populateEvaluation() {
     db.Evaluation
         .remove({})
         //.then(() => db.Evaluation.collection.insertMany(evalSeed))
-        .then( () => {
-            db.User.find({}, function(err, doc) {
+        .then(() => {
+            db.User.find({}, function (err, doc) {
                 evalSeed[0].userId = doc[2]._id;
                 evalSeed[1].userId = doc[1]._id;
                 evalSeed[2].userId = doc[0]._id;
                 evalSeed[3].userId = doc[1]._id;
+                evalSeed[4].userId = doc[3]._id;
 
                 db.Evaluation.collection.insertMany(evalSeed)
-                    .then( data => {
+                    .then(data => {
                         console.log(data.result.n + " evaluation records inserted!");
                         process.exit(0);
                     })
