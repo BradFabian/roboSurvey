@@ -5,14 +5,17 @@ export default {
 
   // List all Programming Languages//
   searchUdemy: function() {
-    return axios.get("/api-2.0/courses/?subcategory=Programming%20Languages", {
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        Authorization:
-          "Basic ZEtrMmNxMDlYSnZLVDVaM0JXR0hSM1RsT29tVlBmMGZmTHE3SDdnbzp1MVJFMEtGdU1BalFvUVF1TjN2dWZETjBJcERPdnlsQmw4Y2o1UXJ4R0lqZ2FENjF0emo1dkpnSUNONmR6MHRCdFRSZzRjWFh6Y01ZVWpMWEd0MDhpeTdkSU5pcTA4eEpwZmNzMVlrR0VkRFl4WXpxVGNieFM4dUVpZE9OanVqMw==",
-        "Content-Type": "application/json;charset=utf-8"
+    return axios.get(
+      "https://udemy.com/api-2.0/courses/?subcategory=Programming%20Languages",
+      {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          Authorization:
+            "Basic ZEtrMmNxMDlYSnZLVDVaM0JXR0hSM1RsT29tVlBmMGZmTHE3SDdnbzp1MVJFMEtGdU1BalFvUVF1TjN2dWZETjBJcERPdnlsQmw4Y2o1UXJ4R0lqZ2FENjF0emo1dkpnSUNONmR6MHRCdFRSZzRjWFh6Y01ZVWpMWEd0MDhpeTdkSU5pcTA4eEpwZmNzMVlrR0VkRFl4WXpxVGNieFM4dUVpZE9OanVqMw==",
+          "Content-Type": "application/json;charset=utf-8"
+        }
       }
-    });
+    );
   },
 
   /***** U S E R S ******/
