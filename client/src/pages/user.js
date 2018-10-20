@@ -3,6 +3,7 @@ import ChartsPage from "../components/PieChart/pieChart";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
 import SurveyList from "../components/SurveyList/SurveyList";
+import UdemyList from "../components/UdemyList/UdemyList";
 import ResultList from "../components/ResultList/ResultList";
 import API from "../utils/API";
 
@@ -10,7 +11,8 @@ class User extends Component {
   state = {
     result: [],
     name: [],
-    survey: []
+    survey: [],
+    udemy: []
   };
   loadScores = query => {
     API.getAllEvals()
@@ -30,10 +32,17 @@ class User extends Component {
       .catch(err => console.log(err));
   };
 
+  loadUdemy = query => {
+    API.searchUdemy(this.props.match.params.id)
+      .then(res => this.setState({ udemy: res.data }))
+      .catch(err => console.log(err));
+  };
+
   componentDidMount() {
     this.loadScores();
     this.loadUser();
     this.loadEval();
+    this.loadUdemy();
   }
 
   render() {
@@ -41,7 +50,7 @@ class User extends Component {
       <div
         className="BG"
         style={{
-          backgroundImage: "linear-gradient(90deg, navy, aqua)",
+          backgroundImage: "linear-gradient(90deg, grey, black)",
           paddingBottom: "30%"
         }}
       >
@@ -67,6 +76,18 @@ class User extends Component {
                 <SurveyList survey={this.state.survey} />{" "}
               </Col>
             </Row>
+            <Col size="md-12" style={{ paddingTop: 10 }}>
+              <Card>
+                <CardTitle>
+                  We reccomend taking these courses to improve your skill set:
+                </CardTitle>
+                <CardBody>
+                  {" "}
+                  <UdemyList udemy={this.state.udemy} />
+                  INSERT UDEMY API HERE
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </div>
