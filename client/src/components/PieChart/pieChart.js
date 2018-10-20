@@ -34,10 +34,10 @@ class ChartsPage extends React.Component {
         <Doughnut
           options={{ responsive: true }}
           data={{
-            labels: [this.state.labels],
+            labels: [...this.state.labels],
             datasets: [
               {
-                data: [this.state.data],
+                data: [...this.state.data],
                 backgroundColor: [
                   "#F7464A",
                   "#46BFBD",
