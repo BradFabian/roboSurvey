@@ -1,5 +1,5 @@
 import React from "react";
-import { Chart, Doughnut } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import { Container } from "mdbreact";
 import API from "../../utils/API";
 
