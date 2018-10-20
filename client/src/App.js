@@ -8,6 +8,8 @@ import User from "./pages/user";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
+import DisplaySurvey from "./components/DisplaySurvey";
+
 import "./App.css";
 
 const App = () => (
@@ -21,6 +23,9 @@ const App = () => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/user/:id" component={User} />
       <Route exact path="/manager/:id" component={Manager} />
+
+      <Route exact path="/take-survey/:id" component={DisplaySurvey} />
+
       <Footer />
     </div>
   </Router>
