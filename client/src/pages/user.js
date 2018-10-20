@@ -18,11 +18,8 @@ class User extends Component {
   };
 
   loadUser = query => {
-<<<<<<< HEAD
     API.getUser("5bba189117f469381400f17f")
-=======
     API.getUser(this.props.match.params.id)
->>>>>>> 631ed69258acf90b46c5b96f26e70ed08240a7f5
       .then(res => this.setState({ name: res.data }))
       .catch(err => console.log(err));
   };
