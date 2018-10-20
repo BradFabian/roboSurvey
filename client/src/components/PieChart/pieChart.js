@@ -13,7 +13,10 @@ class ChartsPage extends React.Component {
     API.getUserEval(this.props.userId)
       .then(res => {
         this.setState(
-          { data: res.data[0].points, labels: res.data[0].surveyName },
+          {
+            data: [res.data[0].points, res.data[1].points],
+            labels: [res.data[0].surveyName, res.data[1].surveyName]
+          },
           () => {
             console.log(this.state);
           }
