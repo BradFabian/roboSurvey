@@ -3,7 +3,7 @@ import ChartsPage from "../components/PieChart/pieChart";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
 import SurveyList from "../components/SurveyList/SurveyList";
-import ResultList from "../components/ResultList/ResultList";
+
 import API from "../utils/API";
 
 class User extends Component {
