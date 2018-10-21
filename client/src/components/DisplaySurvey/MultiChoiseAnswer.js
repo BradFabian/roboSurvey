@@ -8,11 +8,8 @@ class MultiChoiseAnswer extends React.Component {
 
         return(
             <div>
-                Answer 1
-                <input type="radio" name="answer1" value="0"/> 
-
-                Answer 2
-                <input type="radio" name="answer1" value="1"/> 
+                {this.props.answer}
+                <input type="radio" name={this.props.radioName} value={this.props.value}/> 
             </div>
         )
     }

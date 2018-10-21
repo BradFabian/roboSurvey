@@ -5,18 +5,30 @@ import MultiChoiseAnswer from './MultiChoiseAnswer'
 
 class DisplaySurvey extends React.Component {
 
-    state = {
-        survey: {
-            name: "",
-            survey: [
-                {
-                    answers: ["", "", ""],
-                    question: "",
-                    correctanswer: 0
-                }
-            ]
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            survey : {
+                name: "",
+                survey: [
+                    {
+                        answers: ["", "", ""],
+                        question: "",
+                        correctanswer: 0
+                    }
+                ]
+            }
         }
+        
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+    
 
     loadSurvey() {
         console.log('DisplaySurvey component');
@@ -37,12 +49,19 @@ class DisplaySurvey extends React.Component {
 
         return (
             <div>
-                <div>
-                    <h2>{this.state.survey.name}</h2>
+                <div className="container">
+                    <h2>{"Survey: " + this.state.survey.name}</h2>
                     <form>
-                        <Question question="My first question"/>
-                        <MultiChoiseAnswer />
-                        <input type="submit" value="Submit"/>
+                        {
+                            this.state.survey.survey.map( 
+                                (survey, i) => <Question key = {i} 
+                                                         question = {survey.question} 
+                                                         answers = {survey.answers}
+                                                         questionNo = {i}    
+                                                         /> 
+                            )
+                        }
+                        <input type="submit" value="Submit" onClick="handleSubmit"/>
                     </form>
                 </div>
             </div>
