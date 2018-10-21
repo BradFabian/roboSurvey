@@ -7,8 +7,7 @@ import Manager from "./pages/manager";
 import User from "./pages/user";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
-
-import DisplaySurvey from "./components/DisplaySurvey";
+import DisplaySurvey from "./pages/survey";
 
 import "./App.css";
 
@@ -22,9 +21,8 @@ const App = () => (
       <Route exact path="/faq" component={FAQ} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/user/:id" component={User} />
-      <Route exact path="/manager/:id" component={Manager} />
-
-      <Route exact path="/take-survey/:id" component={DisplaySurvey} />
+      <Route exact path="/manager" component={Manager} />
+      <Route exact path="/survey/:id" component={DisplaySurvey} />
 
       <Footer />
     </div>

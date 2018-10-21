@@ -1,1 +1,1 @@
-export {default} from "./DisplaySurvey";
+export {default} from "./Question";

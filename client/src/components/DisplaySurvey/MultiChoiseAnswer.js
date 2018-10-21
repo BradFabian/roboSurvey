@@ -1,6 +1,4 @@
 import React from 'react';
-import {RadioGroup} from 'react';
-import {RadioOption} from 'react';
 
 class MultiChoiseAnswer extends React.Component {
 
