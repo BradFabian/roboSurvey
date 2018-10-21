@@ -26,7 +26,7 @@ const Navbar = props => (
           <Link
             to="/faq"
             className={
-              window.location.pathname === "/discover"
+              window.location.pathname === "/faq"
                 ? "nav-link active"
                 : "nav-link"
             }
@@ -38,7 +38,7 @@ const Navbar = props => (
           <Link
             to="/login"
             className={
-              window.location.pathname === "/search"
+              window.location.pathname === "/login"
                 ? "nav-link active"
                 : "nav-link"
             }
