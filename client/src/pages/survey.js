@@ -1,5 +1,6 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+//import { Redirect } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import API from '../utils/API';
 import Question from '../components/DisplaySurvey/Question';
 
@@ -9,7 +10,6 @@ class DisplaySurvey extends React.Component {
         super(props);
 
         this.state = {
-            redirect: false,
             survey : {
                 name: "",
                 survey: [
@@ -26,15 +26,10 @@ class DisplaySurvey extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    renderRedirect() {
-        if (this.state.redirect) {
-            return <Redirect to="/user/5bcb4f8cdea5c248d0df1d45" />
-        }
-    }
-
+    
     handleSubmit(event) {
         event.preventDefault();
-        console.log("Submit button pressed");
+        //console.log("Submit button pressed");
         
         //Take the results from the form
         
@@ -42,7 +37,7 @@ class DisplaySurvey extends React.Component {
             //This has to be done previusly from user page before taking the survey
         
         //redirect to user page
-        this.setState({redirect: true});
+        this.props.history.push("/user/5bcb4f8cdea5c248d0df1d45"); //change this, is hardcoded for testing
     }
     
 
@@ -86,4 +81,4 @@ class DisplaySurvey extends React.Component {
     }
 }
 
-export default DisplaySurvey;
+export default withRouter(DisplaySurvey);
