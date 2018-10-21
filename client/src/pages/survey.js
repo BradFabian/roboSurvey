@@ -19,6 +19,12 @@ class DisplaySurvey extends React.Component {
                         correctanswer: 0
                     }
                 ]
+            },
+            evaluation: {
+                userId: null,
+                surveyName: null,
+                answers: [],
+                points: null
             }
         }
         
@@ -28,6 +34,7 @@ class DisplaySurvey extends React.Component {
 
     
     handleSubmit(event) {
+        
         event.preventDefault();
         //console.log("Submit button pressed");
         
@@ -42,13 +49,24 @@ class DisplaySurvey extends React.Component {
     
 
     loadSurvey() {
-        console.log('DisplaySurvey component');
-
         API.getSurvey(this.props.match.params.id)
             .then(res => {
-                    this.setState({ survey: res.data });
+                    const data = res.data;
+                    const evalu = {
+                        userId: null,
+                        surveyName: data.name,
+                        answers: [],
+                        points: null
+                    };
+                    this.setState({ survey: data, evaluation: evalu });
                     console.log( this.state.survey );
                 })
+            .catch(err => console.log(err));
+    }
+
+    saveEval() {
+        API.addEval(this.state.evaluation)
+            .then(res => console.log(res))
             .catch(err => console.log(err));
     }
 
