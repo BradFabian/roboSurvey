@@ -33,7 +33,7 @@ class User extends Component {
   };
 
   loadUdemy = query => {
-    API.searchUdemy(this.props.match.params.id)
+    API.searchUdemy()
       .then(res => this.setState({ udemy: res.data }))
       .catch(err => console.log(err));
   };
