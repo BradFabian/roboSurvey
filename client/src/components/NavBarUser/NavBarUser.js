@@ -36,7 +36,32 @@ const Navbaruser = props => (
         </Link>
       </li>
     </ul>
-
+    <ul className="navbar-nav justify-content-end ml-auto">
+      <li class="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          dataToggle="dropdown"
+          ariaHaspopup="true"
+          ariaExpanded="false"
+        >
+          Take Survey
+        </a>
+        <div className="dropdown-menu" ariaLabelledby="navbarDropdown">
+          <a className="dropdown-item" href="#">
+            HTML Survey
+          </a>
+          <a className="dropdown-item" href="#">
+            CSS Survey
+          </a>
+          <a className="dropdown-item" href="#">
+            Javascript Survey
+          </a>
+        </div>
+      </li>
+    </ul>
     <ul className="navbar-nav justify-content-end ml-auto">
       <li className="nav-item  mr-md-2">
         <Link to="/surveyHtml" style={{ color: "white" }}>

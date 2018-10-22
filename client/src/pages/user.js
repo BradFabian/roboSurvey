@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ChartsPage from "../components/PieChart/pieChart";
 
-import Navbaruser from "../components/NavBarUser/NavBarUser";
+import NavbarUser from "../components/NavBarUser/NavBarUserReact";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
@@ -54,11 +54,11 @@ class User extends Component {
         style={{
           backgroundImage: "linear-gradient(90deg, grey, black)",
           paddingBottom: "30%",
-          paddingTop: "10%"
+          paddingRight: "0",
+          paddingLeft: "0"
         }}
       >
-        {" "}
-        <Navbaruser />
+        <NavbarUser />
         <Container style={{ margin: "auto" }}>
           <Row>
             <Col size="md-12">
