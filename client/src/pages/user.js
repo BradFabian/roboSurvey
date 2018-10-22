@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ChartsPage from "../components/PieChart/pieChart";
 
-import Navbar from "../components/NavBar";
+import Navbaruser from "../components/NavBarUser/NavBarUser";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
@@ -53,11 +53,12 @@ class User extends Component {
         className="container-fluid"
         style={{
           backgroundImage: "linear-gradient(90deg, grey, black)",
-          paddingBottom: "30%"
+          paddingBottom: "30%",
+          paddingTop: "10%"
         }}
       >
         {" "}
-        <Navbar />
+        <Navbaruser />
         <Container style={{ margin: "auto" }}>
           <Row>
             <Col size="md-12">
