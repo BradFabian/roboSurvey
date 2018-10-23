@@ -1,27 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarNav,
-  NavbarToggler,
-  Collapse,
-  NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from "mdbreact";
+import { Navbar, NavbarNav, NavItem, NavLink, Fa, SideNav } from "mdbreact";
 
-class NavbarUser extends React.Component {
+class UserNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
       collapse: false,
-      isWideEnough: false
+      dropdownOpen: false,
+      toggleStateA: false
     };
     this.onClick = this.onClick.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.handleToggleClickA = this.handleToggleClickA.bind(this);
+  }
+
+  // Slide out buttons event handlers
+  handleToggleClickA() {
+    this.setState({
+      toggleStateA: !this.state.toggleStateA
+    });
   }
 
   onClick() {
@@ -29,42 +27,109 @@ class NavbarUser extends React.Component {
       collapse: !this.state.collapse
     });
   }
+
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
+
   render() {
+    const isOpenWithButtonA = this.state.toggleStateA;
+    const navStyle = { backgroundColor: "black", color: "#fff" };
+    const sideStyle = { backgroundColor: "black", width: "100%" };
+
+    const button1 = (
+      <div
+        href="#!"
+        onClick={this.handleToggleClickA}
+        key="sideNavToggleA"
+        style={{
+          lineHeight: "32px",
+          marginRight: "1em",
+          verticalAlign: "middle"
+        }}
+      >
+        <Fa icon="bars" color="white" size="2x" />
+      </div>
+    );
+    const specialCaseNavbarStyles = {
+      WebkitBoxOrient: "horizontal",
+      flexDirection: "row"
+    };
     return (
       <Router>
-        <Navbar color="black" dark expand="md" fixed>
-          <NavbarBrand href="/">
-            <strong>RoboSurvey</strong>
-          </NavbarBrand>
-          {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-          <Collapse isOpen={this.state.collapse} navbar>
+        <div className="mt-5">
+          <SideNav
+            triggerOpening={isOpenWithButtonA}
+            breakWidth={1300}
+            style={sideStyle}
+            hidden
+          >
+            <li>
+              <ul className="HTML-SURVEY">
+                <li>
+                  <a href="#!" style={{ color: "white" }}>
+                    Test Your HTML SKills
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" style={{ color: "white" }}>
+                    Test Your CSS Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" style={{ color: "white" }}>
+                    Test Your Javascript Skills
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </SideNav>
+          <Navbar style={navStyle} dark expand="md" className="fixed-top">
             <NavbarNav left>
-              <NavItem active>
-                <NavLink to="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/login">LogOut</NavLink>
+              <NavItem>{button1}</NavItem>
+              <NavItem className="d-none d-md-inline" style={{ paddingTop: 5 }}>
+                <strong>RoboSurvey</strong>
               </NavItem>
             </NavbarNav>
-            <NavbarNav right>
+            <NavbarNav right style={specialCaseNavbarStyles}>
               <NavItem>
-                <Dropdown>
-                  <DropdownToggle nav caret>
-                    Take Survey
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem href="#">HTML SURVEY</DropdownItem>
-                    <DropdownItem href="#">CSS SURVEY</DropdownItem>
-                    <DropdownItem href="#">JAVASCRIPT SURVEY</DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
+                <a href="/" style={{ padding: "15px" }}>
+                  <Fa
+                    icon="home"
+                    className="d-inline-inline"
+                    style={{ color: "white" }}
+                  />{" "}
+                  <div
+                    className="d-none d-md-inline"
+                    style={{ color: "white" }}
+                  >
+                    Home
+                  </div>
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href="/login" style={{ padding: "15px" }}>
+                  <Fa
+                    icon="user"
+                    className="d-inline-inline"
+                    style={{ color: "white" }}
+                  />{" "}
+                  <div
+                    className="d-none d-md-inline"
+                    style={{ color: "white" }}
+                  >
+                    Logout
+                  </div>
+                </a>
               </NavItem>
             </NavbarNav>
-          </Collapse>
-        </Navbar>
+          </Navbar>
+        </div>
       </Router>
     );
   }
 }
 
-export default NavbarUser;
+export default UserNav;

@@ -16,11 +16,6 @@ class User extends Component {
     survey: [],
     udemy: []
   };
-  loadScores = query => {
-    API.getAllEvals()
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
-  };
 
   loadUser = query => {
     API.getUser(this.props.match.params.id)
@@ -41,7 +36,6 @@ class User extends Component {
   };
 
   componentDidMount() {
-    this.loadScores();
     this.loadUser();
     this.loadEval();
     this.loadUdemy();
@@ -55,10 +49,15 @@ class User extends Component {
           backgroundImage: "linear-gradient(90deg, grey, black)",
           paddingBottom: "30%",
           paddingRight: "0",
-          paddingLeft: "0"
+          paddingLeft: "0",
+          marginTop: "50px"
         }}
       >
-        <NavbarUser />
+        <Row>
+          <Col size="md-12">
+            <NavbarUser />
+          </Col>
+        </Row>
         <Container style={{ margin: "auto" }}>
           <Row>
             <Col size="md-12">
@@ -66,9 +65,6 @@ class User extends Component {
             </Col>
 
             <Row>
-              <Col>
-                <SurveyList survey={this.state.survey} />
-              </Col>
               <Col>
                 <Card>
                   <CardBody style={{ textAlign: "center" }}>
