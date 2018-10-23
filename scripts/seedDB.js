@@ -13,39 +13,39 @@ const db = require("../models");
 
 //user collection seeds
 const userSeed = [
-  {
-    firstname: "Joed",
-    lastname: "Machado",
-    email: "joed@mail.um",
-    login: "joed",
-    password: "password",
-    role: "user"
-  },
-  {
-    firstname: "Oscar",
-    lastname: "Fuentes",
-    email: "oscar@mail.um",
-    login: "oscar",
-    password: "password",
-    role: "user"
-  },
-  {
-    firstname: "Jose",
-    lastname: "De las Salas",
-    email: "jose@mail.um",
-    login: "jose",
-    password: "password",
-    role: "manager"
-  },
-  {
-    firstname: "Brad",
-    lastname: "Fabian",
-    email: "brad@mail.um",
-    login: "brad",
-    password: "password",
-    role: "user"
-  }
-  
+    {
+        firstname: "Joed",
+        lastname: "Machado",
+        email: "joed@mail.um",
+        login: "joed",
+        password: "password",
+        role: "user"
+    },
+    {
+        firstname: "Oscar",
+        lastname: "Fuentes",
+        email: "oscar@mail.um",
+        login: "oscar",
+        password: "password",
+        role: "user"
+    },
+    {
+        firstname: "Jose",
+        lastname: "De las Salas",
+        email: "jose@mail.um",
+        login: "jose",
+        password: "password",
+        role: "manager"
+    },
+    {
+        firstname: "Brad",
+        lastname: "Fabian",
+        email: "brad@mail.um",
+        login: "brad",
+        password: "password",
+        role: "user"
+    }
+
 ];
 
 //survey collection seeds
@@ -55,16 +55,16 @@ const surveySeed = [
         survey: [
             {
                 question: "What does HTML stand for?",
-                answers: ["Hyper Text Markup Language", 
-                          "Hyperlinks and Text Markup Language", 
-                          "Home Tool Markup Language"],
+                answers: ["Hyper Text Markup Language",
+                    "Hyperlinks and Text Markup Language",
+                    "Home Tool Markup Language"],
                 correctanswer: 0
             },
             {
                 question: "What is the correct sequence of HTML tags for starting a webpage?",
-                answers: ["Head, Title, HTML", 
-                          "Title, Head, HTML", 
-                          "HTML, Head, Title"],
+                answers: ["Head, Title, HTML",
+                    "Title, Head, HTML",
+                    "HTML, Head, Title"],
                 correctanswer: 2
             },
             {
@@ -79,10 +79,10 @@ const surveySeed = [
         survey: [
             {
                 question: "CSS stand for?",
-                answers: ["Case Sensitive Style", 
-                          "Computers Style Sheets", 
-                          "Cascade Style Sheets", 
-                          "Cascade Style Systems"],
+                answers: ["Case Sensitive Style",
+                    "Computers Style Sheets",
+                    "Cascade Style Sheets",
+                    "Cascade Style Systems"],
                 correctanswer: 2
             },
             {
@@ -102,10 +102,10 @@ const surveySeed = [
         survey: [
             {
                 question: "How can we starts Javascript ?",
-                answers: ["Script tag", 
-                          "Javascript tag", 
-                          "Language tag", 
-                          "None of above"],
+                answers: ["Script tag",
+                    "Javascript tag",
+                    "Language tag",
+                    "None of above"],
                 correctanswer: 0
             },
             {
@@ -140,13 +140,19 @@ const evalSeed = [
     {
         userId: null,
         surveyName: "HTML",
-        answers:[0, 2, 3],
+        answers: [0, 2, 3],
         points: 66.66
     },
     {
         userId: null,
         surveyName: "HTML",
-        answers:[0, 2, 0],
+        answers: [0, 2, 0],
+        points: 100
+    },
+    {
+        userId: null,
+        surveyName: "HTML",
+        answers: [0, 2, 0],
         points: 100
     }
 ];
@@ -155,21 +161,21 @@ function populateUser() {
     console.log('Inserting users...');
     db.User
         .remove({})
-        .then(() => db.User.collection.insertMany(userSeed)) 
+        .then(() => db.User.collection.insertMany(userSeed))
         .then(data => {
-        console.log(data.result.n + " user records inserted!");
-        populateSurvey();
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    });
+            console.log(data.result.n + " user records inserted!");
+            populateSurvey();
+        })
+        .catch(err => {
+            console.error(err);
+            process.exit(1);
+        });
 
 }
 
 function populateSurvey() {
     console.log('inserting surveys...')
-    db.Survey  
+    db.Survey
         .remove({})
         .then(() => db.Survey.collection.insertMany(surveySeed))
         .then(data => {
@@ -179,7 +185,7 @@ function populateSurvey() {
         .catch(err => {
             console.error(err);
             process.exit(1);
-    });
+        });
 }
 
 function populateEvaluation() {
@@ -187,15 +193,16 @@ function populateEvaluation() {
     db.Evaluation
         .remove({})
         //.then(() => db.Evaluation.collection.insertMany(evalSeed))
-        .then( () => {
-            db.User.find({}, function(err, doc) {
+        .then(() => {
+            db.User.find({}, function (err, doc) {
                 evalSeed[0].userId = doc[2]._id;
                 evalSeed[1].userId = doc[1]._id;
                 evalSeed[2].userId = doc[0]._id;
                 evalSeed[3].userId = doc[1]._id;
+                evalSeed[4].userId = doc[3]._id;
 
                 db.Evaluation.collection.insertMany(evalSeed)
-                    .then( data => {
+                    .then(data => {
                         console.log(data.result.n + " evaluation records inserted!");
                         process.exit(0);
                     })
@@ -208,13 +215,13 @@ function populateEvaluation() {
 }
 
 
-    
+
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roboSurvey").then(
-    () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
+    () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */
         populateUser();
     },
-    err => { /** handle initial connection error */ 
-        console.log('Error connection to MongoDB \n' + error );
+    err => { /** handle initial connection error */
+        console.log('Error connection to MongoDB \n' + error);
     }
 );

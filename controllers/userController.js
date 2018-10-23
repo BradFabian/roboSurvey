@@ -16,6 +16,13 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     },
 
+    findByEmail: function(req, res) {
+        db.User
+            .find({email: req.body.email, password: req.body.password}, {role:1})
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
+
     create: function(req, res) {
         db.User
           .create(req.body)
