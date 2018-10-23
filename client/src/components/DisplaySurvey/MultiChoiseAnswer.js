@@ -6,8 +6,7 @@ class MultiChoiseAnswer extends React.Component {
 
         return(
             <div>
-                {this.props.answer}
-                <input type="radio" name={this.props.radioName} value={this.props.value}/> 
+                <input type="radio" name={this.props.radioName} value={this.props.value}/> {this.props.answer} 
             </div>
         )
     }

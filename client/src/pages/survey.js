@@ -65,19 +65,22 @@ class DisplaySurvey extends React.Component {
 
         return (
             <div>
-                <div className="container">
-                    <h2>{"Survey: " + this.state.survey.name}</h2>
+                <div className="container-fluid">
+                    <h1 className="row justify-content-md-center">
+                    <strong>{"Survey: " + this.state.survey.name}</strong>                    
+                    </h1>
                     <form>
                         {
                             this.state.survey.survey.map( 
                                 (survey, i) => <Question key = {i} 
-                                                         question = {survey.question} 
+                                                         question = {survey.question}
                                                          answers = {survey.answers}
                                                          questionNo = {i}    
                                                          /> 
                             )
                         }
-                        <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+                        <input type="submit" value="Submit" onClick={this.handleSubmit} color="Secondary"/>
+                        <br></br>
                     </form>
                 </div>
             </div>
