@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardBody, Input, Button } from "mdbreact";
 import API from "../../utils/API";
 
@@ -9,6 +10,7 @@ class Login extends React.Component {
     super( props );
 
     this.state = {
+      modalOpen: false,
       userRole: null,
       userId: null,
       email: "",
@@ -18,6 +20,7 @@ class Login extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.changeEmail = this.changeEmail.bind(this);
     this.changePass = this.changePass.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   validateUser() {
@@ -33,7 +36,8 @@ class Login extends React.Component {
             this.props.history.push("/manager");
         }
         else {
-          alert("Wrong email or password")
+          alert("Wrong email or password");
+          //this.toggleModal();
           this.clearForm();
         } 
 
@@ -44,6 +48,10 @@ class Login extends React.Component {
   clearForm() {
     this.refs.email.value = "";
     this.refs.password.value = "";
+  }
+
+  toggleModal() {
+    this.setState({modalOpen: !this.state.modalOpen});
   }
 
 
@@ -66,7 +74,13 @@ class Login extends React.Component {
 
   render() {
     return (
+
       <Container>
+        <MessageModal show={this.state.modalOpen}
+             onClose={this.toggleModal}>
+          Wrong e-mail or password
+        </MessageModal>
+
         <Row>
           <Col md="4" style={{ margin: "auto" }}>
             <Card>
@@ -109,5 +123,57 @@ class Login extends React.Component {
     );
   }
 }
+
+class MessageModal extends React.Component {
+
+  render() {
+    if (!this.props.show) {
+      return null
+    }
+
+    // The gray background
+    const backdropStyle = {
+      position: 'fixed',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      padding: 50
+    };
+
+    // The modal "window"
+    const modalStyle = {
+      backgroundColor: '#fff',
+      borderRadius: 5,
+      maxWidth: 500,
+      minHeight: 300,
+      margin: '0 auto',
+      padding: 30
+    };
+
+    return (
+      
+      <div className="backdrop" style={{backdropStyle}}>
+        <div className="modal" style={{modalStyle}}>
+          
+          {this.props.children}
+
+          <div className="footer">
+            <button onClick={this.props.onClose}>
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+MessageModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+  children: PropTypes.node
+};
 
 export default withRouter(Login);
