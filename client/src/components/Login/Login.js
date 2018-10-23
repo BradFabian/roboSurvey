@@ -28,7 +28,12 @@ class Login extends React.Component {
     API.getUserAuth(user)
       .then( res => {
         if (res.data.length > 0) {
+
           this.setState({userId: res.data[0]._id, userRole: res.data[0].role});
+          sessionStorage.setItem("email", this.state.email);
+          sessionStorage.setItem("role", this.state.userRole);
+          sessionStorage.setItem("userId", this.state.userId);
+
           this.clearForm();
           if (this.state.userRole === 'user')
             this.props.history.push("/user/"+this.state.userId);
