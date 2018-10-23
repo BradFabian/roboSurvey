@@ -12,7 +12,7 @@ export default {
           Accept: "application/json, text/plain, */*",
           Authorization:
             "Basic ZEtrMmNxMDlYSnZLVDVaM0JXR0hSM1RsT29tVlBmMGZmTHE3SDdnbzp1MVJFMEtGdU1BalFvUVF1TjN2dWZETjBJcERPdnlsQmw4Y2o1UXJ4R0lqZ2FENjF0emo1dkpnSUNONmR6MHRCdFRSZzRjWFh6Y01ZVWpMWEd0MDhpeTdkSU5pcTA4eEpwZmNzMVlrR0VkRFl4WXpxVGNieFM4dUVpZE9OanVqMw==",
-          "Content-Type": "application/json;charset=utf-8"
+          ContentType: "application/json;charset=utf-8"
         }
       }
     );
@@ -27,6 +27,10 @@ export default {
   // List one user with the given id
   getUser: function(id) {
     return axios.get("/api/users/" + id);
+  },
+  //Get user by email and password (used on login page)
+  getUserAuth: function(user) {
+    return axios.post("api/login", user);
   },
   //Creates one user
   addUser: function(user) {

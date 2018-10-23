@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import NavBar from "../components/NavBar/index";
+import Footer from "../components/Footer";
 import image from "../assets/img/cityscape.jpg";
 import reviews from "../reviews.json";
 import {
@@ -29,7 +30,12 @@ class About extends Component {
           backgroundPosition: "top center"
         }}
       >
-        <Container style={{ paddingTop: "10px" }}>
+        <Row>
+          <Col size="md-12">
+            <NavBar />
+          </Col>
+        </Row>
+        <Container style={{ paddingTop: "80px" }}>
           <div
             className=" card-body bg-dark text-center"
             style={{ opacity: ".8" }}
@@ -139,6 +145,11 @@ class About extends Component {
             </Card>
           </CardGroup>
         </Container>
+        <Row>
+          <Col size="md-12">
+            <Footer />
+          </Col>
+        </Row>
       </div>
     );
   }

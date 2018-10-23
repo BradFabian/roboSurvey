@@ -11,12 +11,15 @@
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
-    "mdbreact": "^4.8.1",
+    "material-dashboard-react": "^1.5.0",
+    "mdbreact": "git+https://oauth2:yLcpzNx7QnGJNv-FSdhX@git.mdbootstrap.com/mdb/react/re-pro.git",
     "react": "^16.5.2",
+    "react-burger-menu": "^2.5.4",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^1.1.5",
+    "react-sidebar": "^3.0.2",
     "salad-ui.chart": "^1.1.55"
   },
   "scripts": {

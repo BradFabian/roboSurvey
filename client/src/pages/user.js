@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import ChartsPage from "../components/PieChart/pieChart";
+
+import NavbarUser from "../components/NavBarUser/NavBarUserReact";
+import Footer from "../components/Footer";
 import { Container, Row, Col, Card, CardBody, CardTitle } from "mdbreact";
 import Welcome from "../components/Welcome/Welcome";
 import SurveyList from "../components/SurveyList/SurveyList";
 import UdemyList from "../components/UdemyList/UdemyList";
-import ResultList from "../components/ResultList/ResultList";
 import API from "../utils/API";
 
 class User extends Component {
@@ -13,11 +15,6 @@ class User extends Component {
     name: [],
     survey: [],
     udemy: []
-  };
-  loadScores = query => {
-    API.getAllEvals()
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
   };
 
   loadUser = query => {
@@ -39,7 +36,6 @@ class User extends Component {
   };
 
   componentDidMount() {
-    this.loadScores();
     this.loadUser();
     this.loadEval();
     this.loadUdemy();
@@ -48,21 +44,27 @@ class User extends Component {
   render() {
     return (
       <div
-        className="BG"
+        className="container-fluid"
         style={{
           backgroundImage: "linear-gradient(90deg, grey, black)",
-          paddingBottom: "30%"
+          paddingBottom: "30%",
+          paddingRight: "0",
+          paddingLeft: "0",
+          marginTop: "50px"
         }}
       >
+        <Row>
+          <Col size="md-12">
+            <NavbarUser />
+          </Col>
+        </Row>
         <Container style={{ margin: "auto" }}>
           <Row>
             <Col size="md-12">
               <Welcome className="welcome_user" name={this.state.name} />
             </Col>
+
             <Row>
-              <Col>
-                <SurveyList survey={this.state.survey} />
-              </Col>
               <Col>
                 <Card>
                   <CardBody style={{ textAlign: "center" }}>
@@ -90,6 +92,7 @@ class User extends Component {
             </Col>
           </Row>
         </Container>
+        <Footer />
       </div>
     );
   }

@@ -5,9 +5,12 @@ const SurveyList = props => (
     {props.survey.map(result => (
       <li className="list-group-item" key={result._id}>
         <h2>
-          Test:
-          {result.surveyName} Survey:
-          {result.points}
+          You took the
+          {""}
+          <span> {result.surveyName} </span> {""} test and got {""}
+          <span> {result.points} </span>
+          {""}
+          points
         </h2>
       </li>
     ))}
