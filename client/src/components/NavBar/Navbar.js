@@ -27,7 +27,7 @@ const Navbar = props => (
           <Link
             to="/faq"
             className={
-              window.location.pathname === "/faq"
+              window.location.pathname === "/login"
                 ? "nav-link active"
                 : "nav-link"
             }         
