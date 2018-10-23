@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = props => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <Link className="navbar-brand" to="/">
       RoboSurvey
     </Link>
@@ -22,6 +22,7 @@ const Navbar = props => (
             About
           </Link>
         </li>
+
         <li className="nav-item">
           <Link
             to="/faq"
@@ -29,19 +30,7 @@ const Navbar = props => (
               window.location.pathname === "/faq"
                 ? "nav-link active"
                 : "nav-link"
-            }
-          >
-            FAQ
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="/login"
-            className={
-              window.location.pathname === "/login"
-                ? "nav-link active"
-                : "nav-link"
-            }
+            }         
           >
             Login
           </Link>
