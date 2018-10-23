@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Navbar, NavbarNav, NavItem, NavLink, Fa, SideNav } from "mdbreact";
+import { Navbar, NavbarNav, NavItem, Fa, SideNav } from "mdbreact";
 
 class UserNav extends Component {
   constructor(props) {
