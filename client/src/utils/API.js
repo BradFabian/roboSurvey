@@ -28,6 +28,10 @@ export default {
   getUser: function(id) {
     return axios.get("/api/users/" + id);
   },
+  //Get user by email and password (used on login page)
+  getUserAuth: function(user) {
+    return axios.post("api/login", user);
+  },
   //Creates one user
   addUser: function(user) {
     return axios.post("/api/users", user);
