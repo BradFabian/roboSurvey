@@ -72,9 +72,6 @@ class User extends Component {
 
             <Row>
               <Col>
-                <SurveyList survey={this.state.survey} />
-              </Col>
-              <Col>
                 <Card>
                   <CardBody style={{ textAlign: "center" }}>
                     <CardTitle tag="h5">Skills Results Graph</CardTitle>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Navbar, NavbarNav, NavItem, NavLink, Fa, SideNav } from "mdbreact";
 
 class UserNav extends Component {
@@ -103,8 +103,7 @@ class UserNav extends Component {
                       : "nav-link"
                   }
                 >
-                  <Fa icon="home" className="d-inline-inline" />{" "}
-                  <div className="d-none d-md-inline">Home</div>
+                  <Fa icon="home" className="d-inline-inline" /> Home
                 </NavLink>
               </NavItem>
               <NavItem>
