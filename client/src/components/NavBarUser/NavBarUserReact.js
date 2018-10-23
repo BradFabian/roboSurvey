@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Navbar, NavbarNav, NavItem, NavLink, Fa, SideNav } from "mdbreact";
 
 class UserNav extends Component {
@@ -95,29 +95,34 @@ class UserNav extends Component {
             </NavbarNav>
             <NavbarNav right style={specialCaseNavbarStyles}>
               <NavItem>
-                <NavLink
-                  to="/"
-                  className={
-                    window.location.pathname === "/"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                >
-                  <Fa icon="home" className="d-inline-inline" /> Home
-                </NavLink>
+                <a href="/" style={{ padding: "15px" }}>
+                  <Fa
+                    icon="home"
+                    className="d-inline-inline"
+                    style={{ color: "white" }}
+                  />{" "}
+                  <div
+                    className="d-none d-md-inline"
+                    style={{ color: "white" }}
+                  >
+                    Home
+                  </div>
+                </a>
               </NavItem>
               <NavItem>
-                <NavLink
-                  to="/login"
-                  className={
-                    window.location.pathname === "/login"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                >
-                  <Fa icon="user" className="d-inline-inline" />{" "}
-                  <div className="d-none d-md-inline">Logout</div>
-                </NavLink>
+                <a href="/login" style={{ padding: "15px" }}>
+                  <Fa
+                    icon="user"
+                    className="d-inline-inline"
+                    style={{ color: "white" }}
+                  />{" "}
+                  <div
+                    className="d-none d-md-inline"
+                    style={{ color: "white" }}
+                  >
+                    Logout
+                  </div>
+                </a>
               </NavItem>
             </NavbarNav>
           </Navbar>

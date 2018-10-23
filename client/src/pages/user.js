@@ -16,11 +16,6 @@ class User extends Component {
     survey: [],
     udemy: []
   };
-  loadScores = query => {
-    API.getAllEvals()
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
-  };
 
   loadUser = query => {
     API.getUser(this.props.match.params.id)
@@ -41,7 +36,6 @@ class User extends Component {
   };
 
   componentDidMount() {
-    this.loadScores();
     this.loadUser();
     this.loadEval();
     this.loadUdemy();
