@@ -55,10 +55,15 @@ class User extends Component {
           backgroundImage: "linear-gradient(90deg, grey, black)",
           paddingBottom: "30%",
           paddingRight: "0",
-          paddingLeft: "0"
+          paddingLeft: "0",
+          marginTop: "50px"
         }}
       >
-        <NavbarUser />
+        <Row>
+          <Col size="md-12">
+            <NavbarUser />
+          </Col>
+        </Row>
         <Container style={{ margin: "auto" }}>
           <Row>
             <Col size="md-12">

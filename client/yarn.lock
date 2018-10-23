@@ -1801,11 +1801,6 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chain-function@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/chain-function/-/chain-function-1.0.1.tgz#c63045e5b4b663fb86f1c6e186adaf1de402a1cc"
-  integrity sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==
-
 chalk@1.1.3, chalk@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
@@ -2693,7 +2688,7 @@ dom-converter@~0.2:
   dependencies:
     utila "~0.4"
 
-dom-helpers@^3.2.0, dom-helpers@^3.2.1, dom-helpers@^3.3.1:
+dom-helpers@^3.2.1, dom-helpers@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
   integrity sha512-2Sm+JaYn74OiTM2wHvxJOo3roiq/h25Yi69Fqk269cNUwIXsCvATB6CRSFC9Am/20G2b28hGv/+7NiWydIrPvg==
@@ -5709,16 +5704,15 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdbreact@^4.8.1:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/mdbreact/-/mdbreact-4.8.1.tgz#bf1cb39244d0cb18f6e4021cae566b762389ec23"
-  integrity sha512-Wqqhc+IeCRzU0COS0ZoA8+lBVEx+9E0SgUhTvMjD+ZxhxPw+PCHnwMEUKC73B4fxRIeqrSx69Uswl0v11or4Mw==
+"mdbreact@git+https://oauth2:yLcpzNx7QnGJNv-FSdhX@git.mdbootstrap.com/mdb/react/re-pro.git":
+  version "4.8.2"
+  resolved "git+https://oauth2:yLcpzNx7QnGJNv-FSdhX@git.mdbootstrap.com/mdb/react/re-pro.git#737f5e40364b8c60988313d898719f7f7f388848"
   dependencies:
     "@material-ui/core" "^1.4.2"
     bootstrap-css-only "^4.1.1"
+    chart.js "^2.7.2"
     classnames "^2.2.5"
     font-awesome "^4.7.0"
-    glamor "^2.20.40"
     material-ui-pickers "^1.0.0-rc.12"
     moment "^2.22.2"
     outy "^0.1.2"
@@ -5726,13 +5720,15 @@ mdbreact@^4.8.1:
     raf "^3.4.0"
     react "^16.4.1"
     react-autosuggest "^9.3.4"
+    react-chartjs-2 "^2.7.0"
     react-dom "^16.4.1"
-    react-image-lightbox "^4.6.0"
+    react-image-lightbox "5.0.0"
     react-numeric-input "^2.2.3"
     react-popper "^0.7.5"
     react-router-dom "^4.2.0"
     react-toastify "^3.2.2"
-    react-transition-group "^1.2.1"
+    react-transition-group "^2.5.0"
+    salad-ui.chart "^1.1.55"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -7244,7 +7240,7 @@ react-chartist@0.13.1:
   dependencies:
     prop-types "^15.5.8"
 
-react-chartjs-2@^2.7.4:
+react-chartjs-2@^2.7.0, react-chartjs-2@^2.7.4:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/react-chartjs-2/-/react-chartjs-2-2.7.4.tgz#e41ea4e81491dc78347111126a48e96ee57db1a6"
   integrity sha512-lXTpBaDlk9rIMjRONjZd76dIUhEm3vOp2jOrJrsFG/UpFI5VqX8Xw83apVHTnUGJ968f8i/i/syLddls4NHy2g==
@@ -7317,13 +7313,13 @@ react-google-maps@9.4.5:
     scriptjs "^2.5.8"
     warning "^3.0.0"
 
-react-image-lightbox@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-4.6.0.tgz#14b823a1aaf914f471613dc4ca59d8ce4c3dbf97"
-  integrity sha512-77nhT4D90z1lK8ztR40EiiXp0H/Py7dIccNT993Nq1HT168WXKqVSCmjB6IEA1uxjpkseal/tptTU7eVWoFH1A==
+react-image-lightbox@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.0.0.tgz#0c19aa8a43abf41262cbe082c779cc01f6334b5f"
+  integrity sha512-2ivXwbpGeknDYb0zkfdeitXUvHCIFjLH/sHEBRSQoEV7hxVIXYpeSZxAPL2hJYoyGxBWzbcbLw4uJXXuD11kOw==
   dependencies:
-    prop-types "^15.5.8"
-    react-modal "^3.1.10"
+    prop-types "^15.6.1"
+    react-modal "^3.4.4"
 
 react-jss@^8.1.0:
   version "8.6.1"
@@ -7341,7 +7337,7 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-modal@^3.1.10:
+react-modal@^3.4.4:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.6.1.tgz#54d27a1ec2b493bbc451c7efaa3557b6af82332d"
   integrity sha512-vAhnawahH1fz8A5x/X/1X20KHMe6Q0mkfU5BKPgKSVPYhMhsxtRbNHSitsoJ7/oP27xZo3naZZlwYuuzuSO1xw==
@@ -7497,17 +7493,6 @@ react-toastify@^3.2.2:
     glamor "^2.20.40"
     prop-types "^15.6.0"
     react-transition-group "^2.2.1"
-
-react-transition-group@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"
-  integrity sha512-CWaL3laCmgAFdxdKbhhps+c0HRGF4c+hdM4H23+FI1QBNUyx/AMeIJGWorehPNSaKnQNOAxL7PQmqMu78CDj3Q==
-  dependencies:
-    chain-function "^1.0.0"
-    dom-helpers "^3.2.0"
-    loose-envify "^1.3.1"
-    prop-types "^15.5.6"
-    warning "^3.0.0"
 
 react-transition-group@^2.2.1, react-transition-group@^2.5.0:
   version "2.5.0"
