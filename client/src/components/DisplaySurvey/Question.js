@@ -6,16 +6,19 @@ class Question extends React.Component {
     render() {
         return (
             <div>
-                <h3>{this.props.question}</h3>
+                <h5>
+                <strong className="blue-grey-text">{this.props.question}</strong>
+                </h5>
                 {
                     this.props.answers.map(
                         (answer, i) => <MultiChoiseAnswer key = {i}
-                                                          answer = {answer}
                                                           radioName = {"question"+this.props.questionNo}
+                                                          answer = {answer}
                                                           value = {i}
                         />
                     )
                 }
+                <br></br>
             </div>
         )
     }
