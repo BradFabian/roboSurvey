@@ -112,7 +112,7 @@ class Login extends React.Component {
                     />
                   </div>
                   <div className="text-center">
-                    <Button onClick={this.handleClick}>Login</Button>
+                    <Button onClick={this.handleClick} color="elegant">Login</Button>
                   </div>
                 </form>
               </CardBody>
