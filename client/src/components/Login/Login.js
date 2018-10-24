@@ -30,6 +30,9 @@ class Login extends React.Component {
         if (res.data.length > 0) {
           this.setState({userId: res.data[0]._id, userRole: res.data[0].role});
           this.clearForm();
+
+          this.props.onLogin(this.state.userId); //added
+
           if (this.state.userRole === 'user')
             this.props.history.push("/user/"+this.state.userId);
           if (this.state.userRole === 'manager')

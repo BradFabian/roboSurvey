@@ -44,6 +44,10 @@ class DisplaySurvey extends React.Component {
         //redirect to user page
         this.setState({redirect: true});
     }
+
+    saveEval() {
+        const ui = this.props.userId;
+    }
     
 
     loadSurvey() {
@@ -67,7 +71,7 @@ class DisplaySurvey extends React.Component {
             <div>
                 <div className="container-fluid">
                     <h1 className="row justify-content-md-center">
-                    <strong>{"Survey: " + this.state.survey.name}</strong>                    
+                    <strong>{"Survey: " + this.state.survey.name}</strong>   
                     </h1>
                     <form>
                         {
