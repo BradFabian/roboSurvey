@@ -14,7 +14,8 @@ class User extends Component {
     result: [],
     name: [],
     survey: [],
-    udemy: []
+    udemy: [],
+    surveyList: []
   };
 
   loadUser = query => {
@@ -35,9 +36,17 @@ class User extends Component {
       .catch(err => console.log(err));
   };
 
+  //added
+  loadSurveys = () => {
+    API.getAllSurveys()
+      .then(res => this.setState({surveyList: res.data}))
+      .catch(err => console.log(err));
+  }
+
   componentDidMount() {
     this.loadUser();
     this.loadEval();
+    this.loadSurveys(); //added
     this.loadUdemy();
   }
 
@@ -55,7 +64,7 @@ class User extends Component {
       >
         <Row>
           <Col size="md-12">
-            <NavbarUser />
+            <NavbarUser menuItems={this.state.surveyList}/>  {/**modifyied */}
           </Col>
         </Row>
         <Container style={{ margin: "auto" }}>

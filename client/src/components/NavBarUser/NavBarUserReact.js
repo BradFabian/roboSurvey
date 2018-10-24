@@ -34,6 +34,8 @@ class UserNav extends Component {
     });
   }
 
+  
+
   render() {
     const isOpenWithButtonA = this.state.toggleStateA;
     const navStyle = { backgroundColor: "black", color: "#fff" };
@@ -68,7 +70,20 @@ class UserNav extends Component {
           >
             <li>
               <ul className="HTML-SURVEY">
-                <li>
+
+                { //added
+                  this.props.menuItems.map(
+                    (item, i) => (
+                      <li>
+                        <a href={"/survey/"+item._id} style={{ color: "white" }}>
+                          {"Test Your "+ item.name +" Skills"}
+                        </a>
+                      </li>
+                    )
+                  )
+                }
+
+                {/* <li>
                   <a href="#!" style={{ color: "white" }}>
                     Test Your HTML SKills
                   </a>
@@ -82,7 +97,10 @@ class UserNav extends Component {
                   <a href="#!" style={{ color: "white" }}>
                     Test Your Javascript Skills
                   </a>
-                </li>
+                </li> */}
+
+
+
               </ul>
             </li>
           </SideNav>
