@@ -5,6 +5,7 @@ import FAQ from "./pages/faq";
 import Login from "./pages/login";
 import Manager from "./pages/manager";
 import User from "./pages/user";
+import DisplaySurvey from "./pages/survey";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ const App = () => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/user/:id" component={User} />
       <Route exact path="/manager" component={Manager} />
+      <Route exact path="/survey/:id" component={DisplaySurvey} />
     </div>
   </Router>
 );

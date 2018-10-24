@@ -60,25 +60,28 @@ class User extends Component {
         </Row>
         <Container style={{ margin: "auto" }}>
           <Row>
-            <Col size="md-12">
+            <Col>
               <Welcome className="welcome_user" name={this.state.name} />
             </Col>
-
-            <Row>
-              <Col>
-                <Card>
-                  <CardBody style={{ textAlign: "center" }}>
-                    <CardTitle tag="h5">Skills Results Graph</CardTitle>
-                    <ChartsPage userId={this.props.match.params.id} />
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col>
-                {" "}
-                <SurveyList survey={this.state.survey} />{" "}
-              </Col>
-            </Row>
-            <Col size="md-12" style={{ paddingTop: 10 }}>
+          </Row>
+          <Row>
+            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
+              <Card>
+                <CardBody style={{ textAlign: "center" }}>
+                  <CardTitle tag="h5">Skills Results Graph</CardTitle>
+                  <ChartsPage userId={this.props.match.params.id} />
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
+              {" "}
+              <SurveyList survey={this.state.survey} />{" "}
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
               <Card>
                 <CardTitle>
                   We reccomend taking these courses to improve your skill set:
