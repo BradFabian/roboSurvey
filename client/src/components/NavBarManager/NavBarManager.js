@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Navbar, NavbarNav, NavItem, Fa, SideNav } from "mdbreact";
+import { Navbar, NavbarNav, NavItem, NavLink, Fa, SideNav } from "mdbreact";
 
 class UserNav extends Component {
   constructor(props) {
@@ -33,8 +33,6 @@ class UserNav extends Component {
       dropdownOpen: !this.state.dropdownOpen
     });
   }
-
-
 
   render() {
     const isOpenWithButtonA = this.state.toggleStateA;
@@ -70,39 +68,21 @@ class UserNav extends Component {
           >
             <li>
               <ul className="HTML-SURVEY">
-
-
-                { //added
-                  this.props.menuItems.map(
-                    (item, i) => (
-                      <li>
-                        <a href={"/survey/" + item._id} style={{ color: "white" }}>
-                          {"Test Your " + item.name + " Skills"}
-                        </a>
-                      </li>
-                    )
-                  )
-                }
-
-                {/* <li>
+                <li>
                   <a href="#!" style={{ color: "white" }}>
-                    Test Your HTML SKills
+                    User Survey Results
                   </a>
                 </li>
                 <li>
                   <a href="#!" style={{ color: "white" }}>
-                    Test Your CSS Skills
+                    Add/Edit Survey
                   </a>
                 </li>
                 <li>
                   <a href="#!" style={{ color: "white" }}>
-                    Test Your Javascript Skills
+                    Add/Edit User
                   </a>
-                </li> */}
-
-
-
-
+                </li>
               </ul>
             </li>
           </SideNav>
@@ -152,4 +132,4 @@ class UserNav extends Component {
   }
 }
 
-export default UserNav;
+export default NavBarManager;
