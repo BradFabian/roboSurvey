@@ -84,7 +84,7 @@ class User extends Component {
             <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
               <Card>
                 <CardTitle>
-                  We reccomend taking these courses to improve your skill set:
+                  We recommend taking these courses to improve your skill set:
                 </CardTitle>
                 <CardBody>
                   {" "}

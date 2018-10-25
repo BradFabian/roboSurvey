@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "mdbreact";
+import { Col } from "mdbreact";
 import NavBar from "../components/NavBar/index";
 import Footer from "../components/Footer";
 import Login from "../components/Login";
@@ -9,29 +9,24 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div
-        className="container-fluid"
+        id="loginMedia"
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
-          backgroundPosition: "top center",
-          paddingBottom: "30%",
-          paddingTop: "10%"
+          paddingTop: "300px",
+          paddingBottom: "400px",
+          backgroundPosition: "center"
         }}
       >
-        {" "}
-        <Row>
-          <Col size="md-12">
-            <NavBar />
-          </Col>
-        </Row>
-        <div className="row">
-          <Login />
-        </div>
-        <Row>
-          <Col size="md-12">
-            <Footer />
-          </Col>
-        </Row>
+        <Col size="md-12">
+          <NavBar />
+        </Col>
+
+        <Login />
+
+        <Col size="md-12">
+          <Footer />
+        </Col>
       </div>
     );
   }
