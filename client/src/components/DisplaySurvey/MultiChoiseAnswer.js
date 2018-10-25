@@ -1,5 +1,11 @@
 import React from 'react';
 
+const radioStyle = {
+    opacity: "1",
+    padding: "10"
+}
+
+
 class MultiChoiseAnswer extends React.Component {
 
     constructor(props) {
@@ -19,6 +25,7 @@ class MultiChoiseAnswer extends React.Component {
         console.log(event.target.name + " - " + event.target.value);
     }
 
+    
 
     render() {
 
@@ -30,6 +37,7 @@ class MultiChoiseAnswer extends React.Component {
                     name = {this.props.radioName} 
                     value = {this.props.value}
                     onChange = {this.valueChange}
+                    style = {radioStyle}
                 /> 
             </div>
         )

@@ -75,7 +75,7 @@ class UserNav extends Component {
                   this.props.menuItems.map(
                     (item, i) => (
                       <li>
-                        <a href={"/survey/"+item._id} style={{ color: "white" }}>
+                        <a key={i} href={"/survey/"+item._id} style={{ color: "white" }}>
                           {"Test Your "+ item.name +" Skills"}
                         </a>
                       </li>

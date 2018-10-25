@@ -31,9 +31,9 @@ class User extends Component {
   };
 
   loadUdemy = query => {
-    API.searchUdemy()
+    /* API.searchUdemy()
       .then(res => this.setState({ udemy: res.data }))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err)); */
   };
 
   //added
