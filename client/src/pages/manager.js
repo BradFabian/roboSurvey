@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import {Container} from 'mdbreact';
+import NavBarManager from '../components/NavBarManager/NavBarManager';
 import DropDown from '../components/DropDown/DropDown';
 import ManagerChart from '../components/BarChart/BarChart';
 import SimpleTable from '../components/SimpleTable/SimpleTable';
@@ -52,10 +54,11 @@ class Manager extends React.Component {
     const { classes } = this.props;
 
     return (
-      <React.Fragment>
+      <div>
+        <NavBarManager/>
+        <Container>
         <CssBaseline />
         <div className={classes.root}>
-        <DropDown />
           <main className={classes.content}>
           <br></br>
             <div className={classes.chartContainer}>
@@ -72,7 +75,8 @@ class Manager extends React.Component {
             </div>
           </main>
         </div>
-      </React.Fragment>
+        </Container>
+      </div>
     );
   }
 }
