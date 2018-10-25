@@ -2,7 +2,7 @@ import React from 'react';
 
 const radioStyle = {
     opacity: "1",
-    padding: "10"
+    margin: "10"
 }
 
 
@@ -31,14 +31,18 @@ class MultiChoiseAnswer extends React.Component {
 
         return(
             <div>
+                <label>
                 {this.props.answer}
                 <input 
                     type = "radio" 
                     name = {this.props.radioName} 
                     value = {this.props.value}
                     onChange = {this.valueChange}
+
+                    disabled = {false}
                     style = {radioStyle}
                 /> 
+               </label> 
             </div>
         )
     }
