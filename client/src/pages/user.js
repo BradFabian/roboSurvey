@@ -20,7 +20,7 @@ class User extends Component {
 
   loadUser = query => {
     API.getUser(this.props.match.params.id)
-      .then(res => this.setState({ name: res.data }))
+      .then(res => this.setState({ name: res.data })) //changes here
       .catch(err => console.log(err));
   };
 
@@ -44,6 +44,9 @@ class User extends Component {
   }
 
   componentDidMount() {
+
+    localStorage.setItem("UserId", this.props.match.params.id); //added
+
     this.loadUser();
     this.loadEval();
     this.loadSurveys(); //added
