@@ -27,6 +27,7 @@ class DisplaySurvey extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.setSelectedAnswers = this.setSelectedAnswers.bind(this);
+        this.calcPoints = this.calcPoints.bind(this);
     }
 
     
@@ -39,10 +40,33 @@ class DisplaySurvey extends React.Component {
         
         //Save into collection Evaluations (Need to include wish user is taking the survey). 
         //This has to be done previusly from user page before taking the survey
+        const evaluation = {
+            answers: this.state.selectedAnswers,
+            userId: this.state.userId,
+            surveyName: this.state.survey.name,
+            points:  this.calcPoints()
+        };
+
+        this.saveEval(evaluation);
         
         
         //redirect to user page
         this.props.history.push("/user/"+ this.state.userId); //changed
+    }
+
+    calcPoints() {
+       /* let ca = this.state.survey.survey.reduce( function(val, index, arr, accumulator) {
+                     return (val.correctanswer === this.state.selectedAnswers[index]) ? accumulator + 1 : 0;
+                });
+
+       return toString((ca*100)/this.state.survey.survey.length); */
+
+       let i, p = 0, len = this.state.survey.survey.length;
+       for (i=0; i < len; i++) {
+           p = ( this.state.selectedAnswers[i] === this.state.survey.survey[i].correctanswer ) ? p++ : p;
+       }
+
+       return toString( p*100/len);
     }
     
 
@@ -52,6 +76,12 @@ class DisplaySurvey extends React.Component {
                     this.setState({ survey: res.data });
                     console.log( this.state.survey );
                 })
+            .catch(err => console.log(err));
+    }
+
+    saveEval() {
+        API.addEval(eval)
+            .then(res => {console.log(res.data)})
             .catch(err => console.log(err));
     }
 
