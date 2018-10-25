@@ -4,8 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import DropDown from '../components/DropDown/DropDown';
-import BarChart from '../components/BarChart/BarChart';
+import ManagerChart from '../components/BarChart/BarChart';
 import SimpleTable from '../components/SimpleTable/SimpleTable';
+import API from '../utils/API';
 
 const styles = theme => ({
   root: {
@@ -25,7 +26,15 @@ const styles = theme => ({
 class Manager extends React.Component {
   state = {
     open: true,
+    data: [],
+    names: []
   };
+
+  loadEvals = query => {
+    API.getAllEvals()
+    .then(res => this.setState({data: res.data, names: res.data}))
+    .catch(err => console.log(err));
+  }
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -34,6 +43,10 @@ class Manager extends React.Component {
   handleDrawerClose = () => {
     this.setState({ open: false });
   };
+
+  componentDidMount() {
+    this.loadEvals();
+  }
 
   render() {
     const { classes } = this.props;
@@ -46,7 +59,7 @@ class Manager extends React.Component {
           <main className={classes.content}>
           <br></br>
             <div className={classes.chartContainer}>
-            <BarChart />
+            <ManagerChart />
             <br></br>
             <br></br>
             </div>
