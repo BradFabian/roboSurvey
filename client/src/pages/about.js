@@ -26,7 +26,7 @@ class About extends Component {
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
-          paddingBottom: "15%",
+          paddingBottom: "20%",
           backgroundPosition: "top center"
         }}
       >
@@ -61,7 +61,7 @@ class About extends Component {
                 }}
               >
                 <h3>
-                  Build successful, goal oriented teams by using our app to
+                  Build successful, goal-oriented teams by using our app to
                 </h3>
               </Col>
               <Col
@@ -73,8 +73,8 @@ class About extends Component {
                 }}
               >
                 <h3>
-                  Identify your employees potentials , quintify a great team
-                  enviroment and
+                  Identify your employees' potential, quantify a great team
+                  environment and
                 </h3>
               </Col>
               <Col
@@ -86,8 +86,8 @@ class About extends Component {
                 }}
               >
                 <h3>
-                  Reccomend training for any discovered inadequacies within an
-                  employees skills assesement.
+                  Recommend training for inadequacies discovered during skill
+                  assessements.
                 </h3>
               </Col>
             </Row>

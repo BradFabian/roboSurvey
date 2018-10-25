@@ -71,6 +71,7 @@ class UserNav extends Component {
             <li>
               <ul className="HTML-SURVEY">
 
+
                 { //added
                   this.props.menuItems.map(
                     (item, i) => (
@@ -98,6 +99,7 @@ class UserNav extends Component {
                     Test Your Javascript Skills
                   </a>
                 </li> */}
+
 
 
 

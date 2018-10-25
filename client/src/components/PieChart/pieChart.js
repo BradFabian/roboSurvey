@@ -14,8 +14,12 @@ class ChartsPage extends React.Component {
       .then(res => {
         this.setState(
           {
-            data: [res.data[0].points, res.data[1].points],
-            labels: [res.data[0].surveyName, res.data[1].surveyName]
+            data: [res.data[0].points, res.data[1].points, res.data[2].points],
+            labels: [
+              res.data[0].surveyName,
+              res.data[1].surveyName,
+              res.data[2].surveyName
+            ]
           },
           () => {
             console.log(this.state);
