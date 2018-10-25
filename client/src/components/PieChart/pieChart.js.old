@@ -15,11 +15,15 @@ class ChartsPage extends React.Component {
         this.setState(
           {
             data: [res.data[0].points, res.data[1].points],
+<<<<<<< HEAD
             labels: [
               res.data[0].surveyName,
               res.data[1].surveyName,
               res.data[2].surveyName
             ]
+=======
+            labels: [res.data[0].surveyName, res.data[1].surveyName]
+>>>>>>> feae424136cbb3cf40b2375fd950990ff05a0e10
           },
           () => {
             console.log(this.state);
