@@ -1,28 +1,24 @@
 import React from 'react';
-import { Chart } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Container } from 'mdbreact';
 import API from "../../utils/API";
 
-class ChartsPage extends React.Component {
+class ManagerChart extends React.Component {
     state = {
         data: [],
+        names: []
     };
 
     loadEvals = () => {
-        API.getUserEvals()
+        API.getAllEvals()
         .then(res => {
             this.setState (
-                { data: res.data},
+                { 
+                  data: [res.data[0].points, res.data[1].points, res.data[2].points, res.data[3].points],
+                  names: [res.data[0].surveyName, res.data[1].surveyName, res.data[2].surveyName, res.data[3].surveyName]
+                },
                 () => {
-                    const {data} = this.state;
-                    console.table(data);
-                    let arr = [];
-                    data.map((element) => {
-                        let temp;
-                        temp = (({points}) => ({points})) (element);
-                        arr.push(temp);
-                    })
-                    this.state.data = arr;
+                    console.log(this.state);
                 }
             );
         })
@@ -31,13 +27,18 @@ class ChartsPage extends React.Component {
 
     componentDidMount() {
         // Bar chart
-        var ctxB = document.getElementById("barChart").getContext('2d');
-        new Chart(ctxB, {
-          type: 'bar',
-          data: {
-              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        this.loadEvals();
+    }
+
+    render() {
+        return (
+        <Container>
+        <Bar 
+        options = {{responsive: true}}
+        data = {{
+              labels: [...this.state.names],
               datasets: [{
-                  label: '# of Votes',
+                  label: 'User Evaluations',
                   data: [...this.state.data],
                   backgroundColor: [
                       'rgba(255, 99, 132, 0.2)',
@@ -57,26 +58,13 @@ class ChartsPage extends React.Component {
                   ],
                   borderWidth: 1
               }]
-          },
-          options: {
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          beginAtZero:true
-                      }
-                  }]
-              }
-          }
+        }}
+        />
         });
-    }
-    render() {
-        return (
-        <Container>
-          <canvas id="barChart"></canvas>
-        </Container>
-        );
-    }
+    </Container>
+    );
+}
 
 };
 
-export default ChartsPage;
+export default ManagerChart;

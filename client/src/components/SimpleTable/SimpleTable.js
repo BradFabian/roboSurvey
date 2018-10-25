@@ -2,17 +2,10 @@ import React from 'react';
 import { Table, TableBody, TableHead  } from 'mdbreact';
 import API from "../../utils/API";
 
-//just commenting for the sake of it.
-
-
 class BasicTable extends React.Component {
   state = {
     users: []
 };
-
-componentDidMount() {
-    this.loadUsers();  
-  }
 
 loadUsers = () => {
   API.getAllUsers()
@@ -25,15 +18,19 @@ loadUsers = () => {
          let arr = [];
          users.map((element)=>{
            let temp;
-            temp = (({firstname, lastname, email}) => ({firstname, lastname, email})) (element);
+            temp = (({firstname, lastname, email, role}) => ({firstname, lastname, email, role})) (element);
             arr.push(temp);
-         })
-        this.state.users = arr;
+          })
+        this.setState({users: arr})
       }
     );
   })
   .catch(err => console.log(err));
 };
+
+componentDidMount() {
+    this.loadUsers();  
+  }
 
 render () {
   return (
@@ -43,6 +40,7 @@ render () {
           <th>First Name</th>
           <th>Last Name</th>
           <th>Email</th>
+          <th>Role</th>
         </tr>
       </TableHead>
       <TableBody rows={this.state.users}> 
