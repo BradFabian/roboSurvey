@@ -69,17 +69,26 @@ class UserNav extends Component {
             <li>
               <ul className="HTML-SURVEY">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
+                  <a
+                    href="/survey/5bc3d3fde1103d205cf1fadd"
+                    style={{ color: "white" }}
+                  >
                     Test Your HTML SKills
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
+                  <a
+                    href="/survey/5bc3d3fde1103d205cf1fade"
+                    style={{ color: "white" }}
+                  >
                     Test Your CSS Skills
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
+                  <a
+                    href="/survey/5bc3d3fde1103d205cf1fadf"
+                    style={{ color: "white" }}
+                  >
                     Test Your Javascript Skills
                   </a>
                 </li>
