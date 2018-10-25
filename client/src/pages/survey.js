@@ -10,7 +10,7 @@ class DisplaySurvey extends React.Component {
 
         this.state = {
             redirect: false,
-            survey : {
+            survey: {
                 name: "",
                 survey: [
                     {
@@ -21,7 +21,7 @@ class DisplaySurvey extends React.Component {
                 ]
             }
         }
-        
+
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -35,25 +35,29 @@ class DisplaySurvey extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log("Submit button pressed");
-        
+
         //Take the results from the form
-        
+
         //Save into collection Evaluations (Need to include wish user is taking the survey). 
-            //This has to be done previusly from user page before taking the survey
-        
+        //This has to be done previusly from user page before taking the survey
+
         //redirect to user page
-        this.setState({redirect: true});
+        this.setState({ redirect: true });
     }
-    
+
+    saveEval() {
+        const ui = this.props.userId;
+    }
+
 
     loadSurvey() {
         console.log('DisplaySurvey component');
 
         API.getSurvey(this.props.match.params.id)
             .then(res => {
-                    this.setState({ survey: res.data });
-                    console.log( this.state.survey );
-                })
+                this.setState({ survey: res.data });
+                console.log(this.state.survey);
+            })
             .catch(err => console.log(err));
     }
 
@@ -67,19 +71,19 @@ class DisplaySurvey extends React.Component {
             <div>
                 <div className="container-fluid">
                     <h1 className="row justify-content-md-center">
-                    <strong>{"Survey: " + this.state.survey.name}</strong>                    
+                        <strong>{"Survey: " + this.state.survey.name}</strong>
                     </h1>
                     <form>
                         {
-                            this.state.survey.survey.map( 
-                                (survey, i) => <Question key = {i} 
-                                                         question = {survey.question}
-                                                         answers = {survey.answers}
-                                                         questionNo = {i}    
-                                                         /> 
+                            this.state.survey.survey.map(
+                                (survey, i) => <Question key={i}
+                                    question={survey.question}
+                                    answers={survey.answers}
+                                    questionNo={i}
+                                />
                             )
                         }
-                        <input type="submit" value="Submit" onClick={this.handleSubmit} color="Secondary"/>
+                        <input type="submit" value="Submit" onClick={this.handleSubmit} color="Secondary" />
                         <br></br>
                     </form>
                 </div>

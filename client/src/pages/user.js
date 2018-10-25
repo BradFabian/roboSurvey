@@ -14,7 +14,8 @@ class User extends Component {
     result: [],
     name: [],
     survey: [],
-    udemy: []
+    udemy: [],
+    surveyList: []
   };
 
   loadUser = query => {
@@ -35,9 +36,17 @@ class User extends Component {
       .catch(err => console.log(err));
   };
 
+  //added
+  loadSurveys = () => {
+    API.getAllSurveys()
+      .then(res => this.setState({ surveyList: res.data }))
+      .catch(err => console.log(err));
+  }
+
   componentDidMount() {
     this.loadUser();
     this.loadEval();
+    this.loadSurveys(); //added
     this.loadUdemy();
   }
 
@@ -55,33 +64,30 @@ class User extends Component {
       >
         <Row>
           <Col size="md-12">
-            <NavbarUser />
+            <NavbarUser menuItems={this.state.surveyList} />  {/**modifyied */}
           </Col>
         </Row>
         <Container style={{ margin: "auto" }}>
           <Row>
-            <Col>
+            <Col size="md-12">
               <Welcome className="welcome_user" name={this.state.name} />
             </Col>
-          </Row>
-          <Row>
-            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
-              <Card>
-                <CardBody style={{ textAlign: "center" }}>
-                  <CardTitle tag="h5">Skills Results Graph</CardTitle>
-                  <ChartsPage userId={this.props.match.params.id} />
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
-              {" "}
-              <SurveyList survey={this.state.survey} />{" "}
-            </Col>
-          </Row>
-          <Row>
-            <Col size="md-8" style={{ paddingTop: "10px", margin: "auto" }}>
+
+            <Row>
+              <Col>
+                <Card>
+                  <CardBody style={{ textAlign: "center" }}>
+                    <CardTitle tag="h5">Skills Results Graph</CardTitle>
+                    <ChartsPage userId={this.props.match.params.id} />
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col>
+                {" "}
+                <SurveyList survey={this.state.survey} />{" "}
+              </Col>
+            </Row>
+            <Col size="md-12" style={{ paddingTop: 10 }}>
               <Card>
                 <CardTitle>
                   We reccomend taking these courses to improve your skill set:
